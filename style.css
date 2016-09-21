@@ -1,0 +1,293 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    color: #262f32;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+    color: #262f32;
+}
+
+b{
+    font-weight: bold;
+}
+
+h1{
+    font-weight: 300;
+    line-height: 58px;
+    font-size: 40px;
+}
+
+.main-container {
+    width: 1366px;
+    padding: 0px;
+}
+
+.first-line-text {
+    width: 458px;
+    height: 715px;
+    float: right;
+}
+
+.first-line src{
+    float: left;
+}
+
+.menu-btn {
+    width: 45px;
+    height: 45px;
+    background:url("img/socials.png") no-repeat -135px 0px;
+    margin-top: 49px;
+    margin-left: 48px;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.web-designer {
+    margin-left: 48px;
+    margin-top: 67px;
+}
+
+.first-line {
+    height: 715px;
+    background: #f3f3f3;
+}
+
+.web-designer p {
+    width: 355px;
+    margin-top: 34px; 
+}
+
+.our-services {
+    width: 614px;
+    height: 853px;
+    background: url(img/2.jpg) no-repeat;
+    float: left;
+}
+
+.best-starting {
+    width: 752px;
+    height: 427px;
+    float: right;
+    background: url(img/3.jpg) no-repeat;
+}
+
+.verified-dummy {
+    width: 752px;
+    height: 426px;
+    background: url(img/4.jpg) no-repeat;
+    float: right;
+}
+
+.seconde-line {
+    height: 853px;
+    width: 1366px;
+}
+
+.last-line {
+    width: 1366px;
+    height: 716px;
+}
+
+.about-designer {
+    width: 458px;
+    height: 715px;
+    float: left;
+    background: url(img/designer.jpg) no-repeat;
+}
+
+.hello {
+    width: 908px;
+    height: 715px;
+    float: right;
+    background: url(img/hello.jpg) no-repeat;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.our-services, .verified-dummy, .about-designer, .hello{
+    color: #fff;
+}
+
+.our-services-drawing-scketch, .our-services-make-desing, .our-services-developming-product {
+    margin-left: 59px;
+}
+
+.our-services-make-desing, .our-services-developming-product {
+    margin-top:70px;
+}
+
+.our-services-drawing-scketch {
+    margin-top:60px;
+}
+
+.our-services-drawing-scketch p{
+    width: 467px;
+    margin-top: 24px;
+}
+
+.our-services-make-desing p{    
+    width: 467px;
+    margin-top: 18px;
+}
+
+.our-services-developming-product p{
+    width: 467px;
+    margin-top: 24px;
+}
+
+.our-services-make-desing h2{
+    margin: 0px;
+}
+.best-staring-container {    
+    margin-top: 71px;
+    margin-left: 54px;
+}
+.best-staring-container p, .verified-dummy-container p{
+    width: 555px;
+}
+
+.best-staring-container h2, .verified-dummy-container h2{
+    margin-top: 0px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    margin-top: 53px;
+    display: block;
+    border: 1px solid white;
+    padding-top: 12px; 
+    border-radius: 10px;
+    width: 210px;
+    height: 38px;
+    font-size: 16.5px;
+    text-align: center;
+}
+
+.btn-view-our-history {
+    border: 1px solid #262f32;
+}
+
+.pad {
+    padding-top: 12px;
+}
+
+.btn-go-to-the-page {
+    color: white;
+}
+
+.verified-dummy-container {
+    margin-top: 70px;
+    margin-left: 54px;
+}
+
+.best-staring-container p,.our-services-drawing-scketch p, .our-services-make-desing p, .our-services-developming-product p, .verified-dummy-container p{
+    font-size: 15.5px;
+    line-height:  28px;
+}
+
+.about-designer-container {
+    margin-top: 75px;
+    margin-left: 47px;
+}
+
+
+
+
+
+.this-web-page-designer {
+    margin-bottom: 253px; 
+    margin-top: 0px;
+    line-height: 66px;
+}
+
+.about-designer-proffesion-name {
+    font-size: 16.5px;
+    margin: 0px;
+}
+
+.designer-name {
+    font-size: 42px;
+    margin-top: 42px;
+    margin-bottom: 17px;
+}
+
+.hello-container {
+    margin-top: 75px;
+    margin-left: 55px;
+}
+
+.hello-text {
+    font-size: 45px;
+    margin-bottom: 41px;
+}
+
+.hello-container input,.hello-container textarea {
+    margin-right: 13px;
+    color: white;
+    width: 275px;
+    padding-left: 27px;
+    height: 55px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+    font-size: 16.5px;
+}
+
+
+
+.hello-container textarea{
+    resize: none;
+    width: 595px;
+    height: 136px;
+    margin-top: 15px;
+    padding-top: 14px;
+    font-size: 16.5px;
+    font-family: 'Roboto';
+    margin-bottom: 96px;
+}
+
+.conect-with-us, .contact-me {
+    font-size: 16.5px;
+    margin-bottom: 22px;
+}
+
+.social-box {
+    display: block;
+    margin-right: 7px;
+    float: left;
+    width: 45px;
+    height: 45px;
+}
+
+.social-facebook {
+    background-image: url(img/socials.png);
+}
+
+.social-dribbble {
+    background-image: url(img/socials.png);
+    background-position: -45px 0px;
+}
+
+.social-twitter {
+    background-image: url(img/socials.png);
+    background-position: -90px 0px;
+}
+
+.socials {
+    height: 45px;
+    padding-bottom: 50px;
+}
