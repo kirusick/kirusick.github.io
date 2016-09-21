@@ -1,4 +1,5 @@
 body {
+    overflow-x:hidden;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     color: #262f32;
