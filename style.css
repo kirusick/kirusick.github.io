@@ -205,10 +205,6 @@ h2 {
     margin-left: 47px;
 }
 
-
-
-
-
 .this-web-page-designer {
     margin-bottom: 253px; 
     margin-top: 0px;
@@ -248,7 +244,9 @@ h2 {
     font-size: 16.5px;
 }
 
-
+.hello-container input:focus ,.hello-container textarea:focus{    
+    outline: none;
+}
 
 .hello-container textarea{
     resize: none;
