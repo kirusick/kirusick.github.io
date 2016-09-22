@@ -297,24 +297,31 @@ textarea {
 
 //Стилизация placeholder'ов
 
-input[placeholder]{color:white;}
+input[placeholder]{ color:white;} 
 input::-webkit-input-placeholder {color:white;}
 input::-moz-placeholder{ 
     opacity: 1;
     color:white;
 }/* Firefox 19+ */
-input:-moz-placeholder           {
+input:-moz-placeholder {
     opacity: 1;
     color:white;
 }/* Firefox 18- */
 input:-ms-input-placeholder      {color:white;}
 textarea::-webkit-input-placeholder {color:white;}
-textarea::-moz-placeholder          {
+textarea::-moz-placeholder {
     opacity: 1;
     color:white;
 }/* Firefox 19+ */
-textarea:-moz-placeholder           {
+textarea:-moz-placeholder {
     opacity: 1;
     color:white;
 }/* Firefox 18- */
 textarea:-ms-input-placeholder      {color:white;}
+
+.first-image-block {
+    float: left;
+     background: url(img/1.jpg);
+     width: 908px;
+     height: 715px;
+}
