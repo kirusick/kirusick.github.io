@@ -31,8 +31,9 @@ h1,h2{
 }
 
 .container {
-    width: 1170px;
-    margin: auto;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
 }
 
 body {
@@ -44,21 +45,18 @@ body {
 }
 
 header {
-    height: 109px;
+    min-height: 109px;
     border-top: 3px solid #414141;
     background: #f5f5f5;
+    margin-bottom: 69px;
 }
 
 .header-container {
     margin-top: 28px;
 }
 
-a:hover{
+.active-part{
     color: #1abb9c;
-}
-
-.hello {
-    margin-top: 69px;
 }
 
 .hello-container p{
@@ -67,11 +65,14 @@ a:hover{
 }
 
 .slider {
-    margin-top: 66px;
     padding-top: 253px;
-    background-image: url(img/slider1.jpg);
-    height: 297px;
-    width: 1170px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 30px;
+    background: #ddd3d1 url(img/slider1.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 147px;    
+    max-width: 1170px;
 }
 
 .btn-slider {
@@ -80,21 +81,25 @@ a:hover{
     width: 45px;
     height: 33px;
     padding-top: 12px;
-    margin-left: 20px;
+    margin-bottom: 103px;
 }
 
 .slider-name, .slider-description {
-    margin-left: 50px;
-    margin-top: 103px;
-    width: 341px;
-    padding-left: 20px;
-    height: 35px;
-    padding-top: 13px;
-    font-size: 20px;
+    box-sizing: border-box;
+    max-width: 361px;
+    min-height: 48px;
+    margin-left: 30px;
+    margin-right: 60px;
     margin-bottom: 3px;
+    padding-left: 18px;    
+    padding-top: 13px;
+    padding-right: 18px;
+    padding-bottom: 16px;
+    font-size: 20px;   
     font-weight: 500;
-    background-color: white;
     text-transform: uppercase;
+    line-height: 24px;
+    background-color: white;    
 }
 
 .slider-feature {
@@ -102,78 +107,68 @@ a:hover{
 }
 
 .slider-description {
-    margin-top: 0px;
-    width: 421px;
+    padding-bottom: 18px;
+    margin-right: 0px;
+    max-width: 421px;
     text-transform: none;
     font-size: 16px;
 }
 
 .what-we-do {
     padding-top: 80px;
+    margin-bottom: 80px;
 }
 
-.what-we-do-title {
-    display: inline-block;
+.what-we-do-title-container {
+    margin-bottom: 40px;
     font-weight: 800;
     font-size: 16px;
 }
 
-.what-we-do-title-container {
-    width: 310px;    
-    margin: auto;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.line {
+.line::after, .line::before{
+    content: "";
     display: inline-block;
-    height: 7px;
+    height: 1px;
     width: 82px;
-    border-top: 1px solid #e1e1e1;
+    background-color: #777;
+    vertical-align: middle;
 }
 
-.right-line {
+.line::after {
     margin-left: 15px;
 }
 
-.left-line {
+.line::before {
     margin-right: 15px;
 }
 
 .what-we-do-items {
-    width: 1170px;
-    height: 312px;
-}
-
-.what-we-do-item:first-of-type{
-    margin: 0px;
-}
-
-.what-we-do-item:last-of-type{
-    margin: 0px;
-    float: right;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    min-height: 312px;
 }
 
 .what-we-do-item {
     border: 1px solid #e1e1e1;
-    float: left;
-    width: 268px;
-    height: 311px;
-    margin-left: 30px;
+    width: 23%;
+    max-width: 268px;
+    min-height: 311px;
+    padding: 3px;
 }
 
 .what-we-do-item-second-border {
     border: 1px solid #e1e1e1;
-    margin: 3px;
-    width: 260px;
-    height: 302px;
+    height: calc(100% - 41px);
+    min-height: 263px;
+    padding-bottom: 39px;
 }
 
 .what-we-do-item-picture {
     width: 56px;
     height: 56px;
     background-image: url(img/sprites-features.png);
-    margin: auto;
+    margin: 0 auto;
     margin-top: 52px;
     margin-bottom: 31px;
 }
@@ -199,54 +194,43 @@ a:hover{
 .what-we-do-item-second-border p{
     font-size: 14px;
     text-align: center;
-    width: 223px;
-    height: 98px;
+    width: 85.769%;
+    max-width: 223px;
+    min-height: 98px;
     margin: auto;
     margin-top: 20px;
 }
 
-
-
 .our-process {
     color: #d0d0d0;
-    margin-top: 80px;
-    height: 408px;
-    background: url(img/back1.jpg) no-repeat center;
-    background-size: 100%;
+    padding: 80px 0;    
+    margin-bottom: 80px;
+    min-height: 248px;
+    background: #1a1a1a url(img/back1.jpg) center center no-repeat;
+    background-size: cover;
     font-weight: 500;
 }
 
-.our-process-title-container {
-    margin: auto;
-    width: 314px;
-}
-
-.our-process-title {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 800;
-    margin-top: 80px;
-}
-
 .our-process p{
+    padding: 0 12.82%;
     font-size: 14px;
-    margin: auto;
     text-align: center;
     margin-top: 25px;
-    width: 885px;
+    max-width: 885px;
     font-weight: 500;
 }
 
 .our-process-slider {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
     margin-top: 50px;
-    margin-left: 35px;
 }
 
 .our-process-slider-item {
     text-align: center;
     float: left;
-    width: 134px;
+    max-width: 134px;
 }
 
 .our-process-slider-item-line {
@@ -284,7 +268,7 @@ a:hover{
 }
 
 .our-process-slider-item-image-rapid-solution>div {
-    background-position: -48px 0px;
+    background-position: -48px 0px;    
 }
 
 .our-process-slider-item-image-magic-touch>div {
@@ -295,34 +279,21 @@ a:hover{
     background-position: -144px;
 }
 
-.our-recent-projects-title {
+.our-recent-projects-title-container {
+    margin-bottom: 40px;
     color: #616161;
     font-weight: 800;
     text-transform: uppercase;
-    display: inline-block;
-}
-
-.our-recent-projects-title-container {
-    margin: auto;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    width: 388px;
 }
 
 .our-recent-projects-item {
-    float: left;
-    width: 370px;
-    margin-right: 30px;
+    width: 31.62%;
+    max-width: 370px;
 }
-
-
 
 .our-recent-projects-items {
-    width: 1170px;
-}
-
-.our-recent-projects-item:last-of-type {
-    margin-right: 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .our-recent-project-item-title {
@@ -346,40 +317,33 @@ a:hover{
     font-weight: 500;
     text-align: center;
     font-size: 14px;
-    width: 336px;    
+    max-width: 336px;    
 }
 
 .our-recent-projects {
-    height: 492px;
+    min-height: 412px;
+    padding-bottom: 80px;
 }
 
 .what-our-customers-think {
-    margin-top: 74px;
-    background: url(img/back-customers.jpg) no-repeat center;
-    background-size: 100%;
-    height: 250px;
-    padding-top: 80px;
+    background: url(img/back-customers.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 170px;
+    padding: 80px 0;
 }
 
-.what-our-customers-think-title {
-    display: inline-block;
+.what-our-customers-think-title-container {  
+    margin-bottom: 38px;
     font-weight: 800;
     color: #d0d0d0;
     font-size: 16px;
-    margin-left: 20px;
-    margin-right: 20px;
     text-transform: uppercase;
-}
-
-.what-our-customers-think-title-container {
-    margin: auto;
-    width: 456px;    
-    margin-bottom: 38px;
 }
 
 .what-our-customers-think-discription {
     font-size: 20px;
-    width: 944px;
+    width: 81.1965%;
+    max-width: 944px;
     margin: auto;
     line-height: 35px;
     color: #d8d8d8;
@@ -390,16 +354,15 @@ a:hover{
 .what-our-customers-think-customer-name {
     font-size: 12px;
     color: #1abb9c;
-    width: 118px;
-    margin: auto;
+    max-width: 118px;
+    margin: 0 auto;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 21px;
 }
 
 .what-our-customers-think-slider {
-    margin: auto;
-    width: 54px;
+    text-align: center;
 }
 
 .what-our-customers-think-slider>input{
@@ -407,34 +370,25 @@ a:hover{
 }
 
 .from-the-journal-title-container {
-    width: 372px;
-    margin: auto;
-    margin-top: 80px;
     margin-bottom: 40px;
-}
-
-.from-the-journal-title {
-    display: inline-block;
     text-transform: uppercase;
     font-size: 16px;
     color: #616161;
-    margin: 0px 20px;
     font-weight: 800;
 }
 
 .from-the-journal {
-    height: 501px;
+    padding: 80px 0;
+    min-height: 341px;
 }
 
 .from-the-journal-item>img{
-    width: 370px;
-    height: 250px;
+    width: 100%;
 }
 
 .from-the-journal-item {
-    width: 370px;
-    float: left;
-    margin-right: 30px;
+    max-width: 370px;
+    width: 31.62%;
 }
 
 .from-the-journal-item:last-of-type {
@@ -449,19 +403,19 @@ a:hover{
     padding-top: 9px;
     padding-left: 13px;
     width: 31px;
-    height: 35px;
+    min-height: 35px;
     border: 1px solid #b1b1b1;
 }
 
 .journal-title {
-    margin-left: 15px;
     float: left;
+    margin-left: 15px;
 }
 
 .journal-title-container {
-    width: auto;
     margin-top: 22px;
-    height: 46px;
+    margin-bottom: 15px;
+    min-height: 46px;
 }
 
 .month {
@@ -479,7 +433,6 @@ a:hover{
 }
 
 .journal-discription {
-    margin-top: 15px;
     font-size: 14px;
     line-height: 25px;
 }
@@ -488,32 +441,29 @@ footer {
     font-size: 14px;
     font-weight: 500;
     background: #373737;
-    margin-top: 80px;
     color: #cacaca;
-    height: 400px;
+    min-height: 400px;
     padding-top: 70px;
 }
 
 .get-in-touch {
-    float: left;
-    width: 252px;
+    width: 21.538%;
+    max-width: 252px;
 }
 
 .twitter {
-    margin-left: 50px;
-    width: 232px;
-    float: left;
+    width: 19.83%;
+    max-width: 232px;
 }
 
 .popular-posts {
-    margin-left: 72px;
-    float: left;
-    width: 220px;
+    width: 18.8%;
+    max-width: 220px;
 }
 
 .about-us {
-    float: right;
-    width: 261px;
+    width: 22.3%;
+    max-width: 261px;
 }
 
 .get-in-touch-title {
@@ -589,8 +539,6 @@ footer {
     font-size: 14px;
 }
 
-
-
 .customers-think-slider-item {
     display: inline-block;
     width: 8px;
@@ -610,4 +558,150 @@ footer {
 
 .what-our-customers-think-slider li{
     display: inline-block;
+}
+
+.line {
+    text-align: center;
+    width: auto;
+}
+
+.our-process-title-container {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hello-container {
+    margin-bottom: 66px;
+}
+
+.navigation ul{
+    padding: 0px;
+}
+
+.from-the-journal-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+}
+
+@media screen and (max-width: 1170px) {
+    .container{
+        width: calc(100% - 20px);
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 1086px) {
+    .title-date{
+        display: none;
+    }
+    .journal-title{
+        margin: 0px;
+    }
+    .journal-title-container{
+        margin-top: 12px;
+    }
+}
+
+
+@media screen and (max-width: 780px){
+    .footer-info{
+        flex-wrap: wrap;
+    } 
+    
+    .get-in-touch,.twitter,.popular-posts,.about-us{
+        margin-top: 20px;
+        width: 45%;
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 672px) {
+    .navigation li{
+        margin: 0;
+        margin-bottom: 10px;
+        text-align: center;
+        display: block;
+    }
+    .navigation{        
+        float: none;
+    }
+    .logo{
+        width: 52px;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .what-we-do-items{
+        flex-wrap: wrap;
+    }    
+    .what-we-do-item{
+        margin-top: 10px;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .line::before,.line::after,.our-process-slider-item-line{
+        display: none;
+    }
+    
+    .our-process-slider-item{
+        float: none;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    
+    .our-recent-projects-items,.our-process-slider{
+        display: block;
+    }
+    .from-the-journal-items{
+        display: block;
+    }
+    .our-recent-projects-item{
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .from-the-journal-item{
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .from-the-journal-item:last-of-type{
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    
+    .get-in-touch,.twitter,.popular-posts,.about-us{
+        flex-basis: 100%;
+    }   
+    
+    .what-we-do-item{
+        flex-basis: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
 }
