@@ -1,0 +1,590 @@
+@font-face {
+  font-family: Flaticon;
+  src: url(../fonts/Flaticon.ttf);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/HelveticaNeue.ttf);
+}
+
+@font-face {
+  font-family: Myriad Pro Bold;
+  src: url(../fonts/MyriadProBold.ttf);
+}
+
+@font-face {
+  font-family: Myriad Pro SemiBold;
+  src: url(../fonts/MyriadProSemiBold.ttf);
+}
+
+@font-face{
+  font-family: Helvetica Neue Italic;
+  src: url(../fonts/helveticaneuecyr-italic.otf);
+}
+
+@font-face{
+  font-family: Helvetica Neue BoldItalic;
+  src: url(../fonts/helvetica-neue-bold-italic.ttf);
+}
+
+@font-face{
+  font-family: Novecento Wide DemiBold;
+  src: url(../fonts/NovecentoSansWideDemiBold.otf);
+}
+
+html{
+  font-size: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+body{
+  font-size: 1.6rem;
+  margin: 0px;
+  font-family: Helvetica Neue;
+}
+
+b{
+  font-family: Myriad Pro;
+  color: #222222;
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+p{
+  color: #848484;
+  line-height: 2.6rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.icon-apple::before {
+  content: "\f101";
+}
+
+.icon-android::before {
+  content: "\f100";
+}
+
+.icon-windows::before {
+  content: "\f108";
+}
+
+.platform-icon:hover{
+  opacity: 1;
+}
+
+.platform-icon {
+  display: block;
+  opacity: 0.5;
+  font-family: "Flaticon";
+  font-size: 2.6rem;
+  text-align: center;
+  padding-top: 10px;
+  width: 52px;
+  height: 42px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  background: url(../img/logo.png) no-repeat;
+  width: 144px;
+  height: 78px;
+  margin: 0 auto;
+  margin-bottom: 39px;
+}
+
+.header-platforms-icons {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+
+.main-header {
+  padding-top: 107px;
+  min-height: 593px;
+  background: url(../img/header.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.header-slide-arrow {
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 70px;
+  padding-top: 56px;
+  padding-bottom: 160px;
+}
+
+.feature-row {
+  max-width: 320px;
+}
+
+.features-iphone {
+  background: url(../img/iphone.png) no-repeat;
+  width: 464px;
+  height: 806px;
+  margin-top: -356px;
+  margin-bottom: -160px;
+}
+
+.features-dots-dot::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.features-dots-dot{
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 5px solid rgba(255,255,255,0.15);  
+  border-radius: 50%;
+}
+
+.features-dots-dot:first-child {
+  margin-top: 196px;
+  margin-left: 300px;
+}
+
+.features-dots-dot:nth-child(even) {
+  margin-left: 150px;
+  margin-top: 70px;
+}
+
+.features-dots-dot:nth-child(3) {
+  margin-top: 90px;
+  margin-left: 300px;
+}
+
+.features-dots-dot:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.features-dots-dot:hover::before {
+  background: #e74c3c;
+  transition: 0.3s;
+}
+
+.features-item:nth-of-type(odd)>p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.features-item:nth-of-type(even)>p {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+.about-glow {
+  padding: 60px 0;
+  background: #e8e8e8;
+}
+
+.about-glow-text>b,.glows-reasons-title>b {
+  font-size: 3rem;
+}
+
+.about-glow-video {
+  width: 42%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.about-glow-grid {  
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-glow-text {
+  width: 45%;
+  max-width: 540px;
+}
+
+.about-glow-text>p {
+  margin-top: 30px;
+}
+
+.about-glow-text li {
+    list-style-type: none;
+}
+.about-glow-text li:before {
+  color: black;
+  content: "\f104";
+  font-family: Flaticon;
+  font-size: 1.3rem;
+  margin-right: 15px;
+}
+
+.about-glow-text>ul{
+  padding-left: 20px;
+  color: #848484;
+}
+
+.socials {
+  font-family: Flaticon;
+  font-size: 16px;
+  max-width: 260px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.glows-reasons-title>p {
+  max-width: 1020px;
+  padding: 0px 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.glows-reasons-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.glows-reasons {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 60px;
+  margin: 0 auto;
+}
+
+.glows-reasons-item {
+  box-sizing: border-box;
+  margin: 0 40px;
+  text-align: center;
+  width: calc(33% - 80px);
+  min-height: 260px;
+  max-width: 320px;
+  padding: 20px 0; 
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.reasons-item-title {
+  font-family: Myriad Pro SemiBold;
+  font-size: 2.4rem;
+}
+
+.reasons-item-description {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.glows-reasons-item-row {
+  padding: 0 48px;
+  padding-top: 55px;
+  padding-bottom: 45px;
+  margin: 0px -40px;
+  min-height: 205px;
+  border-right: 1px solid #e3e3e3;
+}
+
+.glows-reasons-items {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reasons-item-picture {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background: url(../img/features.png) no-repeat;
+}
+
+.reasons-picture-flat-design {
+  background-position: -0px -144px;
+  height: 42px;
+  margin-bottom: 36px;
+}
+
+.reasons-picture-marketable {
+  background-position: -0px -186px; 
+  width: 46px; 
+  height: 46px;
+  margin-bottom: 32px;
+}
+
+
+
+.reasons-picture-edit-colors {
+  background-position:  -0px -232px;
+  width: 42px;
+  height: 47px;
+  margin-bottom: 31px;
+}
+
+.reasons-picture-user-friendly {
+  background-position: -0px -48px; 
+}
+
+.reasons-picture-editable {
+  background-position: -0px -96px; 
+}
+
+.glows-reasons-item:nth-of-type(n+4) {
+  border-bottom: none;
+}
+
+.glows-reasons-item:nth-of-type(3n) .glows-reasons-item-row {
+  border-right: none;
+}
+
+.pricing-plans {
+  background: #e8e8e8;
+  padding-top: 60px;
+}
+
+.pricing-plans h2{
+  text-align: center;
+  font-size: 3rem;
+  font-family: Myriad Pro SemiBold;
+}
+
+.pricing-plans p {
+  padding: 0 80px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pricing-plans-card {
+  width: 24%;
+  max-width: 290px;
+  min-height: 420px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: Myriad Pro SemiBold;
+  font-size: 2.8rem;
+  color: white;
+  padding-top: 10px;
+  min-height: 45px;
+  background: #322e2e;
+}
+
+.card-purchase {
+  text-transform: uppercase;
+  font-family: Myriad Pro SemiBold;
+  color: white;
+  font-size: 1.5rem;
+  background: #322e2e;
+  min-height: 60px;
+  padding-top: 20px;
+}
+
+.card-description {
+  background: white;
+  min-height: 245px;
+  padding: 0px 20px;
+}
+
+.card-price {
+  font-family: Novecento Wide DemiBold;
+  font-size: 4.2rem;
+}
+
+.card-price-cents {
+  font-size: 2.4rem;
+  vertical-align: super;
+}
+
+.card-features {
+  padding: 0px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.card-features>li {
+  padding: 15px 0;
+  color: #848484;
+  border-top: 1px solid #c2c2c2;
+}
+
+.btn {
+  margin: 0 auto;
+  display: block;
+  min-height: 30px;
+  max-width: 140px;
+  background: #514d4d;
+}
+
+.pricing-plans-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-plans-card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.pricing-plans-card:hover .card-title, .pricing-plans-card:hover .card-purchase {
+  background: #e74c3c;
+  transition: 0.2s;
+}
+
+.pricing-plans-card:hover .btn-card-purchase {
+  background: #f27a6d;
+  transition: 0.2s;
+}
+
+.btn-card-purchase {
+  padding-top: 1rem;
+  color: white;
+}
+.reviews {
+  text-align: center;
+  background: white;
+  margin-top: -50px;
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
+
+.reviews>p{
+  margin: 0px;
+  margin-bottom: 26px;
+  font-size: 2.4rem;
+  font-family: Helvetica Neue Italic;
+  line-height: 3.4rem;
+}
+
+.reviews-author {
+  font-family: Myriad Pro SemiBold;
+  margin-bottom: 60px;
+}
+
+.pointer {
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e74c3c;
+}
+
+.pointer:hover {
+  background: #e74c3c;
+}
+
+.reviews-slider {
+  width: 60px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.subscribe {
+  text-align: center;
+  background: url(../img/header.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.subscribe>h2{
+  font-family: Myriad Pro SemiBold;
+  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.subscribe input[type="email"] {
+  font-size: 1.8rem;
+  min-height: 72px;
+  padding-left: 30px;
+  text-transform: uppercase;
+  font-family: Myriad Pro SemiBold;
+  background: rgba(0,0,0,0.65);
+  max-width: 350px;
+  width: 70%;
+  border: none;
+  color: #fff;
+}
+
+
+
+.subscribe>form{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 540px;
+}
+
+.btn-subscribe {
+  font-size: 1.8rem;
+  color: white;
+  width: 27%;
+  font-family: Myriad Pro SemiBold;
+  text-transform: uppercase;
+  max-width: 150px;
+  background: #e74c3c;
+  border: 0;
+}
+
+.contact {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.contact h2{
+  font-family: Myriad Pro SemiBold;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.contact p{
+  margin: 30px 0;
+}
+
+.socials>a{
+  display: block;
+  width: 34px;
+  height: 26px;
+  border-radius: 50%;
+  background: #d4d4d4;
+  padding-top: 8px;
+}
+
+.socials>a:hover{
+  background: #e74c3c;
+}
+
+.index-footer a{
+  color: #848484;
+}
+
+.index-footer{
+  background: #e8e8e8;
+  padding: 60px 0;
+}
+.index-footer>ul{
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style: none;
+}
