@@ -63,7 +63,7 @@ p{
 .container {
   margin: 0 auto;
   max-width: 1180px;
-  width: 100%;
+  width: calc(100%-20px);
   padding: 0 10px;
 }
 
@@ -128,12 +128,12 @@ p{
 .features {
   display: flex;
   justify-content: space-between;
-  padding: 0px 70px;
   padding-top: 56px;
   padding-bottom: 160px;
 }
 
 .feature-row {
+  width: 27%;
   max-width: 320px;
 }
 
