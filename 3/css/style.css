@@ -108,7 +108,11 @@ p{
 
 .header-platforms-icons {
   width: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 55px;
@@ -126,7 +130,11 @@ p{
 }
 
 .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 56px;
   padding-bottom: 160px;
@@ -138,7 +146,7 @@ p{
 }
 
 .features-iphone {
-  background: url(../img/iphone.png) no-repeat;
+  background: url(../img/iphone.png) center no-repeat;
   width: 464px;
   height: 806px;
   margin-top: -356px;
@@ -178,12 +186,15 @@ p{
 }
 
 .features-dots-dot:hover {
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .features-dots-dot:hover::before {
   background: #e74c3c;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -213,12 +224,18 @@ p{
 }
 
 .about-glow-grid {  
+  display: -webkit-box;
+  display: -ms-flexbox; 
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .about-glow-text {
-  width: 45%;
+  width: 50%;
   max-width: 540px;
 }
 
@@ -246,7 +263,11 @@ p{
   font-family: Flaticon;
   font-size: 16px;
   max-width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto;
 }
@@ -302,8 +323,13 @@ p{
 
 .glows-reasons-items {
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -433,23 +459,33 @@ p{
 }
 
 .pricing-plans-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .pricing-plans-card:hover {
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .pricing-plans-card:hover .card-title, .pricing-plans-card:hover .card-purchase {
   background: #e74c3c;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .pricing-plans-card:hover .btn-card-purchase {
   background: #f27a6d;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -491,7 +527,10 @@ p{
 
 .reviews-slider {
   width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin: 0 auto;
 }
@@ -526,7 +565,11 @@ p{
 
 
 .subscribe>form{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 540px;
@@ -583,8 +626,92 @@ p{
   max-width: 540px;
   margin: 0 auto;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   list-style: none;
+}
+
+@media screen and (max-width: 860px){
+  .features{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  
+  .feature-row{
+    width: 45%;
+    max-width: 1000px;
+  }
+  
+  .features-iphone{
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 740px){
+  .about-glow-text, .about-glow-video{
+    width: 100%;
+    max-width: 740px;
+  }
+  
+  .about-glow-video{
+    margin-top: 30px;
+  }
+  
+  .glows-reasons-item{
+    width: calc(50% - 80px);
+  }
+  
+  .glows-reasons-item:nth-of-type(3n) .glows-reasons-item-row{
+    border-right: 1px solid #e3e3e3;
+  }
+  
+  .glows-reasons-item:nth-of-type(4) {
+    border-bottom: 1px solid #e3e3e3;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .feature-row{
+    width: 100%;
+  }
+  
+  .features-dots{
+    visibility: hidden;
+  }
+  
+  .features-iphone{
+    width: 90vw;
+    background-size: 100%;
+    height: 160vw;
+  }
+  
+  .glows-reasons-item{
+    width: calc(100% - 80px);
+    border-bottom: 1px solid #e3e3e3;
+  }
+  
+  .glows-reasons-item-row, .glows-reasons-item:nth-of-type(3n) .glows-reasons-item-row{
+    border-right: none;
+  }
+  
+  .glows-reasons-item:nth-of-type(5){
+    border-bottom: 1px solid #e3e3e3;
+  }
+  
+  .glows-reasons-items{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
