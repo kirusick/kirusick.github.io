@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Glow</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
 </head>
 
 <body>
@@ -17,7 +19,7 @@
       <a class="platform-icon icon-windows"></a>
     </div>
     <div class="header-slide-arrow">
-      <a href="#"><img src="img/arrow-down.svg" width="50px" height="15px" alt=""></a>
+      <a href="javascript://0" onclick="slowScroll('#features')"><img src="img/arrow-down.svg" width="50px" height="15px" alt=""></a>
     </div>
   </header>
   <main>
@@ -32,7 +34,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum velit vitae nulla molestie eu. </p>
         </div>
       </div>
-      <div class="features-iphone">
+      <div id="features" class="features-iphone">
         <div class="features-dots">
           <div class="features-dots-dot"></div>
           <div class="features-dots-dot"></div>
@@ -254,7 +256,13 @@
       </li>
     </ul>
   </footer>
-  <script src="js/script.js"></script>
+  <script>
+     function slowScroll(id){
+       var offset = 0;
+       $('html,body').animate ({ scrollTop: $(id).offset ().top - offset}, 1000, 'easeInOutExpo');
+       return false;
+     }
+  </script>
 </body>
 
 </html>

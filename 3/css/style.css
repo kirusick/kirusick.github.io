@@ -391,7 +391,7 @@ p{
 }
 
 .pricing-plans p {
-  padding: 0 80px;
+  padding: 0 6.5%;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -584,6 +584,7 @@ p{
   max-width: 150px;
   background: #e74c3c;
   border: 0;
+  min-height: 72px;
 }
 
 .contact {
@@ -633,7 +634,7 @@ p{
   flex-flow: row wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
 }
 
@@ -681,6 +682,17 @@ p{
   }
 }
 
+@media screen and (max-width:518px){
+  .subscribe>form{
+    justify-content: center;
+     flex-wrap: wrap;
+  }
+  .btn-subscribe{
+    display: block;
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 500px){
   .feature-row{
     width: 100%;
@@ -713,5 +725,22 @@ p{
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+  
+  .pricing-plans-cards{
+    flex-direction: column;
+  }
+  
+  .pricing-plans-card{
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  .pricing-plans-card::first-of-type{
+    margin-top: 0px;
+  }
+  
+  .pricing-plans-card:hover{
+    transform: none;
   }
 }
