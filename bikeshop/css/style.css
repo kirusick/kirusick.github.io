@@ -19,11 +19,8 @@ ul {
   list-style: none;
 }
 .index-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  z-index: 10000;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   position: fixed;
   padding-top: 20px;
@@ -78,7 +75,6 @@ textarea {
   border-top-right-radius: 10px;
   visibility: hidden;
 }
-
 .navigation-cart {
   padding: 0;
   margin-top: 10px;
@@ -103,18 +99,15 @@ textarea {
 .navigation-element:hover > .navigation-element-items {
   visibility: visible;
 }
-
 .slider-text {
   padding-top: 406px;
   color: white;
 }
-
 h1 {
   font-size: 5rem;
   text-transform: uppercase;
   text-align: center;
 }
-
 .slider-text-description {
   font-weight: 100;
   text-align: center;
@@ -122,11 +115,9 @@ h1 {
   margin-top: 18px;
   margin-bottom: 36px;
 }
-
 .text-accent {
   color: #fcff19;
 }
-
 .slider-btn {
   border-radius: 5px;
   background: #000;
@@ -139,18 +130,66 @@ h1 {
   padding: 18px 28px;
   text-transform: uppercase;
 }
-
 .slider-navigation-arrows {
+  position: absolute;
+  padding: 0 23px;
+  width: calc(100% - 46px);
+  top: 461px;
 }
-
 .btn-arrow {
   width: 60px;
   border: none;
   height: 60px;
-  background: url('../img/svg/RIGHT_BUTTON_LINK.svg');
+  mask: url('../img/svg/RIGHT_BUTTON_LINK.svg');
+  -webkit-mask-image: url('../img/svg/RIGHT_BUTTON_LINK.svg');
+  background: #535353;
+}
+.btn-arrow:hover {
+  background: white;
+}
+.btn-arrow-right {
+  position: absolute;
+  right: 23px;
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.scroll-down {
+  width: 66px;
+  height: 77px;
+  left: calc(50% - 33px);
+  position: absolute;
+  bottom: 33px;
+  mask: url('../img/svg/Scroll_icon_link.svg');
+  -webkit-mask-image: url('../img/svg/Scroll_icon_link.svg');
+  background: #515050;
+}
+.scroll-down:hover {
+  background: linear-gradient(to bottom, rgba(251, 255, 25, 1) 0%, rgba(251, 255, 25, 1) 43%, rgba(81, 80, 80, 1) 43%, rgba(81, 80, 80, 1) 100%);
 }
 
-.btn-arrow-right {
-  -webkit-transform:  scale(-1, 1);
-  transform:  scale(-1, 1);
+.slider-navigation {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  height: 1px;
+  display: flex;
+}
+
+.slider-page {
+  height: 1px;
+  flex: 1;
+  background: #aba8a6;
+}
+
+.slider-page-active {
+  height: 2px;
+  margin-top: -1px;
+  background: #fcff19;
+}
+
+.categories {
+  min-height: 628px;
+  background: url('../img/categoriesBG.png') center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
