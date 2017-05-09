@@ -1,0 +1,156 @@
+.container {
+  max-width: 1200px;
+  padding: 0 23px;
+  margin: 0 auto;
+}
+html {
+  font-size: 10px;
+}
+h1,
+h2 {
+  margin: 0 0;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+.index-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  padding-top: 20px;
+  width: 1100px;
+  left: calc(50% - 550px);
+}
+body {
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+}
+input[type="text"],
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+.index-promo {
+  position: relative;
+  min-height: 980px;
+  background: url('../img/sliderbackground.jpg') center;
+  background-size: cover;
+}
+.header-navigation {
+  padding-top: 10px;
+  max-width: 460px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: white;
+}
+.navigation-element-article {
+  color: white;
+}
+.navigation-element {
+  position: relative;
+  padding: 15px 13px 22px;
+}
+.navigation-element-items {
+  position: absolute;
+  left: 0px;
+  width: 220px;
+  padding: 8px 12px 4px;
+  background: #fcff19;
+  color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  visibility: hidden;
+}
+
+.navigation-cart {
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 28px;
+  background: url('../img/svg/Basket_icon.svg') center center;
+  background-size: contain;
+  width: 26px;
+  height: 26px;
+}
+.items-item {
+  cursor: pointer;
+  padding: 11px 0px;
+}
+.navigation-element:hover {
+  background: #fcff19;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.navigation-element:hover > .navigation-element-article {
+  color: black;
+}
+.navigation-element:hover > .navigation-element-items {
+  visibility: visible;
+}
+
+.slider-text {
+  padding-top: 406px;
+  color: white;
+}
+
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.slider-text-description {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 18px;
+  margin-bottom: 36px;
+}
+
+.text-accent {
+  color: #fcff19;
+}
+
+.slider-btn {
+  border-radius: 5px;
+  background: #000;
+  font-size: 1.2rem;
+  color: #fcff19;
+  display: block;
+  text-align: center;
+  max-width: 70px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  text-transform: uppercase;
+}
+
+.slider-navigation-arrows {
+}
+
+.btn-arrow {
+  width: 60px;
+  border: none;
+  height: 60px;
+  background: url('../img/svg/RIGHT_BUTTON_LINK.svg');
+}
+
+.btn-arrow-right {
+  -webkit-transform:  scale(-1, 1);
+  transform:  scale(-1, 1);
+}
