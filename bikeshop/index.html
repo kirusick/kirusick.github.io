@@ -11,45 +11,46 @@
 
 <body>
 
-  <header class="index-header">
 
-    <div class="logo">
-      <img src="img/logoWhite.png" alt="">
-    </div>
-
-    <nav class="header-navigation">
-      <div class="navigation-element">
-        <a href="#" class="navigation-element-article">
-               bycycles
-             </a>
-        <ul class="navigation-element-items">
-          <li class="items-item">fixed / single speed</li>
-          <li class="items-item">city bikes</li>
-          <li class="items-item">premium series</li>
-        </ul>
-      </div>
-      <div class="navigation-element">
-        <a href="#" class="navigation-element-article">
-               parts
-             </a>
-      </div>
-      <div class="navigation-element">
-        <a href="#" class="navigation-element-article">
-               accessories
-             </a>
-      </div>
-      <div class="navigation-element">
-        <a href="#" class="navigation-element-article">
-               extras
-             </a>
-      </div>
-      <a href="#" class="navigation-cart">
-      </a>
-    </nav>
-  </header>
 
 
   <section class="index-promo">
+    <header class="index-header container">
+
+      <div class="logo">
+        <img src="img/logoWhite.png" alt="">
+      </div>
+
+      <nav class="header-navigation">
+        <div class="navigation-element">
+          <a href="#" class="navigation-element-article">
+               bycycles
+             </a>
+          <ul class="navigation-element-items">
+            <li class="items-item">fixed / single speed</li>
+            <li class="items-item">city bikes</li>
+            <li class="items-item">premium series</li>
+          </ul>
+        </div>
+        <div class="navigation-element">
+          <a href="#" class="navigation-element-article">
+               parts
+             </a>
+        </div>
+        <div class="navigation-element">
+          <a href="#" class="navigation-element-article">
+               accessories
+             </a>
+        </div>
+        <div class="navigation-element">
+          <a href="#" class="navigation-element-article">
+               extras
+             </a>
+        </div>
+        <a href="#" class="navigation-cart">
+        </a>
+      </nav>
+    </header>
     <section class="slider-navigation-arrows">
       <button type="button" class="btn-arrow "></button>
       <button type="button" class="btn-arrow btn-arrow-right"></button>
@@ -72,13 +73,14 @@
       <a href="#" class="slider-btn">shop bikes</a>
     </div>
 
-    
+
   </section>
   <article class="categories">
     <div class="container">
-      <h2 class="categories article">categories</h2>
+      <h2 class="categories-article">categories</h2>
       <ul class="categories-list">
         <li class="categories-item">
+          <div class="decorate-triangle"></div>
           <div class="categories-item-article">
             Fixed / single speed
           </div>
@@ -87,7 +89,8 @@
           </p>
           <a href="#" class="categories-link">Go to store</a>
         </li>
-        <li class="categories-item">
+        <li class="categories-item second-categoria">
+          <div class="decorate-triangle"></div>
           <div class="categories-item-article">
             PREMIUM SERIES
           </div>
@@ -96,7 +99,8 @@
           </p>
           <a href="#" class="categories-link">Go to store</a>
         </li>
-        <li class="categories-item">
+        <li class="categories-item thrid-categoria">
+          <div class="decorate-triangle"></div>
           <div class="categories-item-article">
             CITY BIKES
           </div>
@@ -113,38 +117,58 @@
     <h2>popular bikes</h2>
     <ul class="popular-list">
       <li class="popular-list-item">
-        <img src="" alt="" class="list-item-img">
+        <img src="img/favorite1.jpg" alt="" class="list-item-img">
         <div class="popular-info">
           <div class="info-desc">
-            <span class="info-desc-name">fixed gear</span>
-            <br>
+            <div class="info-desc-name">fixed gear</div>
+
             <span class="info-desc-price">$249.00</span>
           </div>
-          <div class="info-option">option</div>
+          <div class="info-option">
+            <span>option</span>
+            <div class="option-button"></div>
+            <div class="option-items">
+              <div class="option-item">option1</div>
+              <div class="option-item">option2</div>
+            </div>
+          </div>
           <button type="button" class="btn-info-btn">Buy</button>
         </div>
       </li>
       <li class="popular-list-item">
-        <img src="" alt="" class="list-item-img">
+        <img src="img/favorite2.jpg" alt="" class="list-item-img">
         <div class="popular-info">
           <div class="info-desc">
-            <span class="info-desc-name">Big boy ultra</span>
-            <br>
+            <div class="info-desc-name">Big boy ultra</div>
+
             <span class="info-desc-price">$249.00</span>
           </div>
-          <div class="info-option">option</div>
+          <div class="info-option"><span>option</span>
+            <div class="option-button"></div>
+            <div class="option-items">
+            </div>
+          </div>
           <button class="btn-info-btn" type="button">Buy</button>
         </div>
       </li>
       <li class="popular-list-item">
-        <img src="" alt="" class="list-item-img">
+        <img src="img/favorite3.jpg" alt="" class="list-item-img">
         <div class="popular-info">
           <div class="info-desc">
-            <span class="info-desc-name">sanchaez</span>
-            <br>
+            <div class="info-desc-name">sanchaez</div>
+
             <span class="info-desc-price">$249.00</span>
           </div>
-          <div class="info-option">option</div>
+          <div class="info-option"><span>option</span>
+            <div class="option-button"></div>
+            <div class="option-items">
+             <div class="option-item">option1</div>
+             <div class="option-item">option2</div>
+             <div class="option-item">option3</div>
+             <div class="option-item">option4</div>
+             <div class="option-item">option5</div>             
+            </div>
+          </div>
           <button class="btn-info-btn" type="button">Buy</button>
         </div>
       </li>
@@ -156,7 +180,7 @@
     <p>
       Please contact us for all inquiries and purchase options.
     </p>
-    <form action="post" class="contact-us-form">
+    <form action="" method="post" class="contact-us-form">
       <input type="text" placeholder="name" class="half-size-input">
       <input type="text" placeholder="surname" class="half-size-input">
       <input type="email" placeholder="USER@DOMAIN.COM">
@@ -166,16 +190,33 @@
   </article>
 
   <footer class="index-footer">
-    <div class="footer-logo">
-      <img src="logo-dark.svg" alt="">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="img/logoBlack.png" alt="">
+      </div>
+      <nav class="footer-navigation">
+        <a href="#" class="footer-link">bicycles</a>
+        <a href="#" class="footer-link">parts</a>
+        <a href="#" class="footer-link">accessories</a>
+        <a href="#" class="footer-link">extras</a>
+      </nav>
     </div>
-    <nav class="footer-navigation">
-      <a href="#" class="footer-link">bicycles</a>
-      <a href="#" class="footer-link">parts</a>
-      <a href="#" class="footer-link">accessories</a>
-      <a href="#" class="footer-link">extras</a>
-    </nav>
   </footer>
+  <script>
+    var options = document.getElementsByClassName('info-option');
+
+    function openOption(e) {
+      if(e.target.className == 'option-item'){
+        this.children[0].innerHTML = e.target.innerHTML;
+      }
+      this.classList.toggle('open');
+    }
+
+    [].forEach.call(options, (function(e) {
+      e.addEventListener('click', openOption);
+    }));
+
+  </script>
 </body>
 
 </html>
