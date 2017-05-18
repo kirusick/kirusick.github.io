@@ -3,6 +3,11 @@
   padding: 0 23px;
   margin: 0 auto;
 }
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
 html {
   font-size: 10px;
 }
@@ -18,7 +23,7 @@ ul {
   padding: 0;
   list-style: none;
 }
-button{
+button {
   cursor: pointer;
 }
 .index-header {
@@ -143,15 +148,14 @@ h1 {
   top: 461px;
 }
 .btn-arrow {
+  background: none;
+  padding: 0px;
   width: 60px;
   border: none;
   height: 60px;
-  mask: url('../img/svg/RIGHT_BUTTON_LINK.svg');
-  -webkit-mask-image: url('../img/svg/RIGHT_BUTTON_LINK.svg');
-  background: #535353;
 }
-.btn-arrow:hover {
-  background: white;
+.btn-arrow:hover .arrow-icon {
+  stroke: white;
 }
 .btn-arrow-right {
   position: absolute;
@@ -165,12 +169,6 @@ h1 {
   left: calc(50% - 33px);
   position: absolute;
   bottom: 33px;
-  mask: url('../img/svg/Scroll_icon_link.svg');
-  -webkit-mask-image: url('../img/svg/Scroll_icon_link.svg');
-  background: #515050;
-}
-.scroll-down:hover {
-  background: linear-gradient(to bottom, rgba(251, 255, 25, 1) 0%, rgba(251, 255, 25, 1) 43%, rgba(81, 80, 80, 1) 43%, rgba(81, 80, 80, 1) 100%);
 }
 .slider-navigation {
   width: 100%;
@@ -190,8 +188,9 @@ h1 {
   background: #fcff19;
 }
 .categories {
-  min-height: 553px;
+  min-height: 383px;
   padding-top: 75px;
+  padding-bottom: 170px;
   background: url('../img/categoriesBG.png') center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -207,7 +206,6 @@ h2 {
 .categories-list {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 170px;
 }
 button {
   font-weight: bold;
@@ -364,6 +362,7 @@ button {
 }
 .contact-us-form textarea {
   resize: none;
+  height: 153px;
 }
 .btn-form-submit {
   cursor: pointer;
@@ -422,8 +421,6 @@ button {
 .info-option.open > .option-button {
   transform: rotate(180deg);
 }
-
-
 .option-items {
   display: none;
   background: white;
@@ -439,17 +436,21 @@ button {
   max-height: 112px;
   overflow-y: auto;
 }
-
 .option-item {
   padding-left: 20px;
   padding-top: 8px;
   height: 24px;
 }
-
 .info-option.open > .option-items {
   display: block;
 }
-
 .option-item:hover {
   background-color: lightgray;
+}
+.scroll-down:hover path {
+  fill: url(#gradient-hover)
+}
+
+.btn-arrow:hover .arrow-icon{
+  stroke: white;
 }
