@@ -73,10 +73,17 @@ textarea {
   color: white;
 }
 .navigation-element {
+  transition: 0.3s;
   position: relative;
   padding: 15px 13px 22px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .navigation-element-items {
+  margin-top: 22px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   left: 0px;
   width: 220px;
@@ -86,7 +93,6 @@ textarea {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  visibility: hidden;
 }
 .navigation-cart {
   padding: 0;
@@ -102,6 +108,7 @@ textarea {
   padding: 11px 0px;
 }
 .navigation-element:hover {
+  transition: 0.3s;
   background: #fcff19;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -110,13 +117,15 @@ textarea {
   color: black;
 }
 .navigation-element:hover > .navigation-element-items {
+  transition: 0.3s;
+  opacity: 1;
   visibility: visible;
 }
 .slider-text *{
    z-index: 10000;
 }
 .slider-text {
-  z-index: 11000;
+  position: relative;
   padding-top: 337px;
   color: white;
 }
@@ -136,6 +145,7 @@ h1 {
   color: #fcff19;
 }
 .slider-btn {
+  position: relative;
   border-radius: 5px;
   background: #000;
   font-size: 1.2rem;
