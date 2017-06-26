@@ -26,10 +26,10 @@ ul {
 button {
   cursor: pointer;
 }
-.index-header *{
-   z-index: 10000;
+.promo-header * {
+  z-index: 10000;
 }
-.index-header { 
+.promo-header {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
@@ -53,7 +53,8 @@ textarea {
 }
 .index-promo {
   position: relative;
-  min-height: 980px;
+  min-height: calc(100vh - 135px);
+  padding-bottom: 135px;
   background: url('../img/sliderbackground.jpg') center;
   background-size: cover;
 }
@@ -121,12 +122,14 @@ textarea {
   opacity: 1;
   visibility: visible;
 }
-.slider-text *{
-   z-index: 10000;
-}
-.slider-text {
+.promo-text {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
   position: relative;
-  padding-top: 337px;
+  z-index: 10;
+  padding-top: 30vh;
   color: white;
 }
 h1 {
@@ -134,7 +137,7 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 }
-.slider-text-description {
+.promo-text-description {
   font-weight: 100;
   text-align: center;
   font-size: 2.8rem;
@@ -144,8 +147,9 @@ h1 {
 .text-accent {
   color: #fcff19;
 }
-.slider-btn {
+.promo-btn {
   position: relative;
+  z-index: 5;
   border-radius: 5px;
   background: #000;
   font-size: 1.2rem;
@@ -161,7 +165,7 @@ h1 {
   position: absolute;
   padding: 0 23px;
   width: calc(100% - 46px);
-  top: 461px;
+  top: 50vh;
 }
 .btn-arrow {
   background: none;
@@ -186,9 +190,6 @@ h1 {
   position: absolute;
   bottom: 33px;
 }
-
-
-
 .categories {
   min-height: 383px;
   padding-top: 75px;
@@ -206,6 +207,7 @@ h2 {
   text-align: center;
 }
 .categories-list {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
 }
@@ -215,6 +217,7 @@ button {
 .categories-item {
   position: relative;
   width: 32%;
+  
   max-width: 346px;
   min-height: 288px;
   background: url(../img/categoria1.jpg) center;
@@ -240,6 +243,8 @@ button {
   margin-bottom: 28px;
 }
 .categories-link {
+  position: relative;
+  z-index: 5;
   display: block;
   margin: 0 auto;
   border: 3px solid white;
@@ -252,6 +257,7 @@ button {
 }
 .decorate-triangle {
   background-image: url(../img/svg/triangle.svg);
+  background-size: 100% 100%;
   transition: 0.2s;
   position: absolute;
   transform: translate(-50%, 50%) scale(0);
@@ -280,12 +286,14 @@ button {
   margin-bottom: 55px;
 }
 .popular-list {
+  flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .popular-list-item {
   text-transform: uppercase;
   width: 28%;
+  min-width: 320px;
   max-width: 490px;
 }
 .list-item-img {
@@ -394,7 +402,7 @@ button {
 }
 .btn-info-btn {
   margin-left: 10px;
-  padding: 16px 35px;
+  padding: 15px 35px;
   font-size: 1.2rem;
   border: none;
   background: #b7b7b7;
@@ -452,28 +460,27 @@ button {
 .scroll-down:hover path {
   fill: url(#gradient-hover)
 }
-
-.btn-arrow:hover .arrow-icon{
+.btn-arrow:hover .arrow-icon {
   stroke: white;
 }
 
 /*slider thinks*/
-.slider *{
+
+.slider * {
   z-index: 0;
 }
 .slider {
+  top: 0px;
   position: absolute;
   width: 100%;
   height: 100%;
 }
-
 .slider-item {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
 }
-
 .slider-navigation {
   width: 100%;
   position: absolute;
@@ -482,29 +489,22 @@ button {
   margin: 0px;
   display: flex;
 }
-
-.slider div{
+.slider div {
   width: 100%;
   height: 100%;
 }
-
-.slider-navigation li{
+.slider-navigation li {
   flex: 1;
-  
 }
-
-.slider-navigation button{
+.slider-navigation button {
   width: 100%;
   height: 20px;
   border: 0px;
   font-size: 0;
   border-bottom: 1px solid #aba8a6;
-  background-color: rgba(1,1,1,0);
+  background-color: rgba(1, 1, 1, 0);
 }
-
-.slick-active button{
+.slick-active button {
   border-bottom: 2px solid #fcff19;
 }
-
-
-
+promo

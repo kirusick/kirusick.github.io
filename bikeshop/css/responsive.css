@@ -1,0 +1,19 @@
+@media screen and (max-width: 980px){
+  .popular{
+    padding: 75px 6px 34px;
+  }
+  
+  .popular-list-item{
+    min-width: none;
+    width: 30%;
+  }
+  
+  .btn-info-btn{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media screen and (max-width: 720px){
+  
+}
