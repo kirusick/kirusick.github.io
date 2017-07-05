@@ -11,9 +11,107 @@
   .btn-info-btn{
     padding-left: 18px;
     padding-right: 18px;
+    margin-right: 10px;
   }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 800px){
+  .footer-navigation{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .categories-item{
+    width: 100%;
+    margin-bottom: 24px;
+  }
   
+  .categories{
+    padding-bottom: 48px;
+  }
+  
+  .half-size-input{
+    width: 100%;
+    max-width: 360px
+  }
+  
+  .contact-us-form{
+    padding: 0px 14px;
+  }
+  
+  .slider-navigation-arrows{
+    visibility: hidden;
+  }
+  
+  .menu-btn{
+    display: block;
+  }
+  
+  .header-navigation{
+    display: none;
+  }
+  
+  .navigation-mobile{
+    display: block;
+  }
+  
+  .footer-logo{
+    order: 2;
+    margin: 0 auto;
+    margin-top: 14px;
+  }
+  
+  .index-footer > div{
+    flex-wrap: wrap;
+  }
+  
+  .footer-navigation{
+    display: flex;
+    order: 1;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .navigation-element-items{
+    color: white;
+    display: none;
+    padding: 0px;
+    visibility: visible;
+    padding-left: 12px;
+    opacity: 1;
+    background: none;
+    margin-top: 6px;
+    margin-bottom: -28px;
+
+    position: relative;
+  }
+    
+  .navigation-element:hover .navigation-element-article{
+    color:white;
+  }
+  
+  .navigation-element:hover{
+    background: black;
+  }
+  
+  .logo.active{
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .footer-link{
+    width: 50%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .popular-list-item{
+    min-width: 310px;
+  }
+  
+  .footer-navigation{
+    justify-content: space-around;
+  }
 }

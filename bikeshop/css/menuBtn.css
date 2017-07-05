@@ -1,0 +1,73 @@
+.ninja-btn {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 44px;
+  height: 28.66666667px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 20px;
+}
+.ninja-btn span,
+.ninja-btn span:before,
+.ninja-btn span:after {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  background-color: #FFFFFF;
+  width: 44px;
+  height: 2px;
+}
+.ninja-btn span {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-top: 13.33333333px;
+}
+.ninja-btn span:before,
+.ninja-btn span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.ninja-btn span:before {
+  top: -13.33333333px;
+}
+.ninja-btn span:after {
+  top: 13.33333333px;
+}
+/* Ninja Button */
+.ninja-btn.active span {
+  background-color: transparent;
+}
+.ninja-btn.active span:before,
+.ninja-btn.active span:after {
+  top: 0;
+}
+.ninja-btn.active span:before {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+}
+.ninja-btn.active span:after {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+}
+/* Ninja Button Active */
+.ninja-btn.active{
+  position: fixed;
+  top: 20px;
+  right: 23px;
+  z-index: 100001;
+}
