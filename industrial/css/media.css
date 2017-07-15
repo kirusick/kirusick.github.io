@@ -1,0 +1,90 @@
+/*tablet*/
+@media screen and (max-width: 768px){
+  .container{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .second-product-left .second-product-description{
+    padding-left: 10px;
+  }
+  .second-product-right .second-product-description{
+    padding-right: 10px;
+  }
+  .other-product{
+    width: 100%;
+    max-width: none;
+  }
+}
+/*mobile L*/
+@media screen and (max-width: 425px){
+  .second-product{
+    width: 100%;
+    max-width: none;
+  }
+  .kickstarter-badge{
+    top: 5px;
+    right: 5px;
+    width: 100px;
+    height: 100px;
+  }
+  .main-product{
+    background-position: 70% bottom; 
+    padding-left: 30px;
+    padding-right: 30px;
+    width: calc(100% - 60px);
+  }
+  .main-product-description{
+    margin-bottom: 50px;
+  }
+  .index-header{
+    flex-wrap: wrap;
+  }
+  .logo{
+    margin: 0 auto;
+  }
+  .search{
+    margin: 0 auto;
+  }
+  .search-input{
+    width: calc(100% - 34px);
+  }
+  .index-footer>nav>ul{
+    font-size: 1.8rem;
+  }
+}
+/*mobile M*/
+@media screen and (max-width: 375px){
+ /* .main-product>h2{
+    font-size: 6rem;
+  }
+  .main-product-description{
+    font-size: 2.8rem;
+  }
+  .second-product>h3{
+    font-size: 4rem;
+  }*/
+  html{
+    font-size:  2.4vw;
+  }
+  .main-product{
+    min-height: calc(600px - 105px);
+  }
+  .input-email{
+    width: calc(100% - 6px);
+  }
+  .mailing-btn{
+    width: 100%;
+  }
+}
+/*mobile S*/
+@media screen and (max-width: 320px){
+  .second-product-left{
+    padding-right: 20px;
+  }
+  .second-product-right{
+    padding-left: 20px;
+  }
+  .second-product-left .btn-buy{
+    right: 20px;
+  }
+}
