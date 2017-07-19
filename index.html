@@ -1,19 +1,82 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
+
 <head>
-  <meta charset="UTF-8">
   <title>Портфолио Орловский Кирилл</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="container">
-    <ul>
-      <li><a href="16/index.html">Loom studio</a></li>
-      <li><a href="3/index.html">Glum</a></li>
-      <li><a href="bikeshop/index.html">Bikeshop</a></li>
-      <li><a href="industrial/index.html">Industrial Design</a></li>
+  <header class="index-header container">
+    <section class="visit-card">
+      <div class="photo">
+        <img src="img/face.jpeg" alt="">
+      </div>
+      <article class="visit-card-about">
+        <h1 class="my-name">Орловский Кирилл Владимирович</h1>
+        <span class="age">Возраст: 19 лет</span>
+        <span class="education">Образование: УО БГУИР "Филлиал МРК", ПОИТ, Техник-программист</span>
+      </article>
+      <h2 class="skills-article">Навыки:</h2>
+      <ul class="skills">
+        <li class="skill">CSS</li>
+        <li class="skill">HTML</li>
+        <li class="skill">JavaScript</li>
+        <li class="skill">jQuery</li>
+        <li class="skill">Адаптивная верстка</li>
+        <li class="skill">Photoshop</li>
+        <li class="skill">C# - базовый уровень</li>
+      </ul>
+    </section>
+    <a href="#works" class="btn-works">Посмотреть работы</a>
+  </header>
+  <main class="works" id="works">
+    <ul class="works-list">
+      <li class="work">
+        <div class="work-background" style="background-image: url('img/industrial.jpg')"></div>
+        <h4 class="work-article">Industrial</h4>
+        <time class="work-date" datetime="2017-07-09 20:00">9 Июля 2017</time>
+        <a href="layouts/industrial/index.html" class="btn">Просмотреть</a>
+      </li>
+      <li class="work">
+        <div class="work-background" style="background-image: url('img/bikeshop.jpg')"></div>
+        <h4 class="work-article">Bikeshop</h4>
+        <time class="work-date" datetime="2017-05-09 20:00">9 Мая 2017</time>
+        <a href="layouts/bikeshop/index.html" class="btn">Просмотреть</a>
+      </li>
+      <li class="work">
+        <div class="work-background" style="background-image: url('img/glow.jpg')"></div>
+        <h4 class="work-article">Glow</h4>
+        <time class="work-date" datetime="2016-10-16 20:00">23 Октября 2016</time>
+        <a href="layouts/3/index.html" class="btn">Просмотреть</a>
+      </li>
     </ul>
-  </div>
-  
+  </main>
+  <footer class="index-footer">
+    <div class="footer-inner container">
+      &copy; Designed by Me;
+    </div>
+
+  </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.btn-works').on('click', function(e) {
+      $.scrollTo($('#works'), {
+        duration: 1000,
+        easing: 'easeOutExpo'
+      });
+      return false;
+    })
+  });
+
+</script>
+
 </html>
