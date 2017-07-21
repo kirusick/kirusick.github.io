@@ -21,6 +21,9 @@
         <span class="age">Возраст: 19 лет</span>
         <span class="education">Образование: УО БГУИР "Филлиал МРК", ПОИТ, Техник-программист</span>
       </article>
+      <h2 class="contants-article">Контакты:</h2>
+      <a href="tel:+375447681455" class="phone-number">+375(44)7681455</a>
+      <a href="mailto:jumpbreak@mail.ru" class="mail">jumpbreak@mail.ru</a>
       <h2 class="skills-article">Навыки:</h2>
       <ul class="skills">
         <li class="skill">CSS</li>
@@ -68,15 +71,22 @@
 <script src="js/jquery.scrollTo.min.js"></script>
 <script>
   $(document).ready(function() {
-    $('.btn-works').on('click', function(e) {
-      $.scrollTo($('#works'), {
-        duration: 1000,
-        easing: 'easeOutExpo'
-      });
-      return false;
-    })
-  });
 
+        $('.btn-works').on('click', function(e) {
+          $.scrollTo($('#works'), {
+            duration: 1000,
+            easing: 'easeOutExpo'
+          });
+          return false;
+        });
+//
+//        $('.work').on('transitionend', function(){
+//          $.scrollTo($(this), {
+//            duration: 1000,
+//            easing: 'easeOutExpo'
+//          });
+//        });
+  });
 </script>
 
 </html>
