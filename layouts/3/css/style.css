@@ -126,6 +126,10 @@ p{
   background-size: cover;
 }
 
+.header-slide-arrow img{
+  width: 50px;
+  height: 15px;
+}
 .header-slide-arrow {
   text-align: center;
 }
