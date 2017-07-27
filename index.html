@@ -31,8 +31,9 @@
         <li class="skill">JavaScript</li>
         <li class="skill">jQuery</li>
         <li class="skill">Адаптивная верстка</li>
-        <li class="skill">Photoshop</li>
+        <li class="skill">PHP - базовый уровень</li>
         <li class="skill">C# - базовый уровень</li>
+        <li class="skill">Photoshop</li>
       </ul>
     </section>
     <a href="#works" class="btn-works">Посмотреть работы</a>
@@ -72,21 +73,22 @@
 <script>
   $(document).ready(function() {
 
-        $('.btn-works').on('click', function(e) {
-          $.scrollTo($('#works'), {
-            duration: 1000,
-            easing: 'easeOutExpo'
-          });
-          return false;
-        });
-//
-//        $('.work').on('transitionend', function(){
-//          $.scrollTo($(this), {
-//            duration: 1000,
-//            easing: 'easeOutExpo'
-//          });
-//        });
+    $('.btn-works').on('click', function(e) {
+      $.scrollTo($('#works'), {
+        duration: 1000,
+        easing: 'easeOutExpo'
+      });
+      return false;
+    });
+    //
+    //        $('.work').on('transitionend', function(){
+    //          $.scrollTo($(this), {
+    //            duration: 1000,
+    //            easing: 'easeOutExpo'
+    //          });
+    //        });
   });
+
 </script>
 
 </html>
