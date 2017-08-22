@@ -1,0 +1,76 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  font-size: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.index-content {
+  position: absolute;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  background-image: -moz-linear-gradient( 90deg, rgba(23,27,33,0.94902) 0%, rgba(23,27,33,0) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgba(23,27,33,0.94902) 0%, rgba(23,27,33,0) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgba(23,27,33,0.94902) 0%, rgba(23,27,33,0) 100%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  background-image: url(../img/iphone5/background.jpg);
+}
+
+.info-slogan {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 4.4rem;
+  color: #fff;
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+
+.info-trial {
+  font-family: 'Rubik', sans-serif;
+  font-size: 4rem;
+  color: #ffa000;
+}
+
+.info-logo {
+  width: 51px;
+  height: 51px;
+  background-size: 100%;
+  background-image: url(../img/iphone4/icon.png);
+  margin-bottom: 13px;
+}
+
+.content-phone {
+  position: relative;
+  width: 86px;
+  height: 175px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%;  
+  background-image: url(../img/iphone4/iphone.png);
+}
+
+.phone-screen {
+  position: absolute;
+  left: calc(50% - 38px);
+  top: calc(50% - 67.5px);
+  background-size: 100%;
+  background-image: url(../img/iphone4/screen.jpg);
+  background-repeat: no-repeat;
+  width: 76px;
+  height: 134px;
+}

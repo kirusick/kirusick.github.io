@@ -1,0 +1,88 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  font-size: 5px;
+}
+a{
+  text-decoration: none;
+}
+.index-content {
+  position: absolute;
+  padding-bottom: 40px;
+  padding-left: 49px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  background-image: -moz-linear-gradient( 90deg, rgba(23,27,33,0.94902) 0%, rgba(23,27,33,0) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgba(23,27,33,0.94902) 0%, rgba(23,27,33,0) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgba(23,27,33,0.94902) 0%, rgba(23,27,33,0) 100%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  background-image: url(../img/ipad/background@0.5x.jpg);
+}
+
+.info-slogan {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 10.8rem;
+  color: #fff;
+  line-height: 60px;
+  margin-bottom: 18px;
+}
+
+.info-trial {
+  font-family: 'Rubik', sans-serif;
+  font-size: 9.2rem;
+  color: #ffa000;
+}
+
+.info-logo {
+  width: 120px;
+  height: 120px;
+  background-size: 100%;
+  background-image: url(../img/ipad/icon@0.5x.png);
+  margin-bottom: 33px;
+}
+
+.content-phone {
+  position: relative;
+  width: 200px;
+  height: 406.5px;
+  margin-right: 39px;
+  background-repeat: no-repeat;
+  background-size: 100%;  
+  background-image: url(../img/ipad/iphone@0.5x.png);
+}
+
+.phone-screen {
+  position: absolute;
+  top: calc(50% - 156px);
+  left: calc(50% - 88.5px);
+  background-size: 100%;
+  background-image: url(../img/ipad/screen@0.5x.jpg);
+  width: 177px;
+  height: 312px;
+}
+
+@media (min-device-pixel-ratio: 2) {
+  .content-phone{
+    background-image: url(../img/ipad/iphone.png);
+  }
+  .phone-screen{
+    background-image: url(../img/ipad/screen.jpg);
+  }
+  .info-logo{
+    background-image: url(../img/ipad/icon.png);
+  }
+  body{
+    background-image: url(../img/ipad/background.jpg);
+  }
+}
