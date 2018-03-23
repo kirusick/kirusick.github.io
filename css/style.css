@@ -168,28 +168,10 @@ body {
 
 .phone-number {
   margin-bottom: 12px;
-  width: 100%;
-}
-.phone-number::before {
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  background: url(../img/smartphone-call.svg);
-  display: inline-block;
-  background-size: contain;
-  margin-right: 5px;
-  background-position: bottom center;
 }
 
-.mail::before {
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  background: url(../img/envelope.svg);
-  display: inline-block;
-  background-size: contain;
-  margin-right: 5px;
-  background-position: bottom center;
+.phone-number>i{
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 670px){
@@ -223,4 +205,57 @@ body {
     width: 100%;
     text-align: center;
   }
+}
+
+.no-photo{
+  width: 200px;
+  height: 200px;
+  background: #eee;
+}
+
+.app-loading *:not(.photo):not(.visit-card-about):not(.skills):not(.jobs-list){
+  background: #eee;
+  color: #eee;
+  border: none;
+}
+
+.h-r{
+  width: 100%;
+}
+
+.monoeyebrow{
+  position: absolute;
+  top: 0px;
+  padding: 8px 24px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #000;
+  color: #fff;
+  left: calc(50vw - 57px);
+}
+
+.monoeyebrow a{
+  color: #fff;
+}
+
+.jobs-article{
+  margin-bottom: 16px;
+}
+
+.jobs-list{
+  margin-bottom: 16px;
+}
+
+.jobs-item{
+  line-height: 1.5;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.jobs-item__logo{
+  width: 84px;
+  height: 84px;
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-right: 16px;
 }
