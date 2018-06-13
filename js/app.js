@@ -52,7 +52,8 @@ let app = new Vue({
             'Vue',
             'Vuex',
             'Redux',
-            'Aurellia'
+            'Aurellia',
+            'React',
         ],
         projects: [
             {
@@ -67,7 +68,7 @@ let app = new Vue({
                 date: '23 October 2016',
                 url:'layouts/3/index.html',
                 backgroundUrl: 'img/glow.jpg'
-            }
+            },
         ],
         jobs: [
             {
@@ -89,7 +90,7 @@ let app = new Vue({
         ],
         isLoading: true,
         avaLoaded: false,
-        lang: 'en'
+        lang: 'en',
     },
     computed: {
         ageOld : function() {
@@ -103,7 +104,7 @@ let app = new Vue({
             var birthdayDate = {
                 year: 1997,
                 month: 12,
-                day: 9
+                day: 9,
             };
             
             age = currentDate.year - birthdayDate.year - 1;
@@ -140,7 +141,7 @@ let app = new Vue({
     },
     methods: {
         scrollToWorks: function() {
-            document.getElementById('works').scrollIntoView({behavior: 'smooth'});
+            document.getElementById('works').scrollIntoView({ behavior: 'smooth' });
         }
     }
 }).$mount('#app');
