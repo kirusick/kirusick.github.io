@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kiryl Arlouski — Senior Frontend Developer</title>
+
+  <style>
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 8px 0 16px 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .job {
+      margin-bottom: 28px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .job-meta {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px 24px;
+      font-size: 14px;
+    }
+
+    .skills span {
+      display: block;
+    }
+
+    .education {
+      margin-bottom: 16px;
+    }
+    
+    .avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    @media print {
+      body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <img src="./images/avatar-compressed.jpg" class="avatar" />
+      <div>
+        <h1>Kiryl Arlouski</h1>
+        <div class="subtitle">Senior Frontend Developer</div>
+        <div class="contact">
+          Warsaw, Poland ·
+          <a href="https://www.linkedin.com/in/kiryl-arlouski/">LinkedIn</a> ·
+          Email: k.smolniy@gmail.com
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Senior Frontend Developer with <strong>7+ years of commercial experience</strong>
+        building scalable, accessible, and high-performance web applications.
+        Strong expertise in <strong>React, TypeScript</strong>, modern frontend tooling,
+        and web accessibility (WCAG/W3C). Experienced in enterprise environments,
+        cross-team collaboration, and mentoring engineers.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Skills</h2>
+      <div class="skills">
+        <span><strong>Languages:</strong> JavaScript (ES6+), TypeScript</span>
+        <span><strong>Frontend:</strong> React, React Hooks</span>
+        <span><strong>State & Forms:</strong> Formik, React Query</span>
+        <span><strong>Styling:</strong> SASS/SCSS, styled-components</span>
+        <span><strong>Testing:</strong> Jest, React Testing Library</span>
+        <span><strong>Build Tools:</strong> Webpack, Vite</span>
+        <span><strong>APIs:</strong> REST, GraphQL</span>
+        <span><strong>Accessibility:</strong> WCAG, W3C</span>
+        <span><strong>Documentation:</strong> Storybook</span>
+        <span><strong>AI Agents:</strong> Github Copilot</span>
+        <span><strong>Other:</strong> Software Design, Data Structures</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <h3>EPAM Systems — Senior Frontend Developer</h3>
+          <div class="job-meta">Nov 2022 – Present · Poland (Hybrid)</div>
+        </div>
+        <ul>
+          <li>Develop and maintain enterprise-scale web applications using React and TypeScript</li>
+          <li>Implement accessible UI solutions compliant with WCAG/W3C standards</li>
+          <li>Perform demo presentations for clients</li>
+          <li>Adopt AI agents to accelerate development and improve test coverage quality</li>
+          <li>Write unit tests and Storybook stories, and participate in code reviews to improve long-term code maintainability</li>
+          <li>Collaborate with backend, QA, and product teams in an agile environment</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <h3>EPAM Systems — Frontend Engineer</h3>
+          <div class="job-meta">Nov 2018 – Nov 2022 · Poland/Belarus</div>
+        </div>
+        <ul>
+          <li>Developed UI features for production web applications</li>
+          <li>Maintained high code quality through code reviews, test writing, and Storybook development</li>
+          <li>Integrated frontend with backend APIs</li>
+          <li>Participated in Scrum ceremonies</li>
+          <li>Improved performance of web applications</li>
+          <li>Enhanced UI accessibility</li>
+          <li>Refactored legacy code</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <h3>iTechArt Group — Frontend Engineer</h3>
+          <div class="job-meta">Aug 2018 – Oct 2018 · Minsk, Belarus</div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <h3>Ultralab — Frontend Engineer</h3>
+          <div class="job-meta">Jan 2018 – Jul 2018 · Minsk, Belarus</div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <h3>LWO (Light Well Organization) — Frontend Developer</h3>
+          <div class="job-meta">Sep 2017 – Jan 2018 · Minsk, Belarus</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education">
+        <strong>Belarusian State University of Informatics and Radioelectronics (BSUIR)</strong><br/>
+        Bachelor’s degree - Computer Technologies (2017 – 2021)
+      </div>
+      <div class="education">
+        <strong>BSUIR Affiliate “Minsk Radioengineering College”</strong><br/>
+        Specialist Degree — Software Programming Technologies (2013 – 2017)
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <ul>
+        <li>English — Upper-Intermediate (B2+)</li>
+        <li>Polish — Upper-Intermediate (B2)</li>
+        <li>Russian — Native</li>
+        <li>Belarusian — Native</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
