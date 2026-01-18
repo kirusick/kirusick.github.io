@@ -1,0 +1,282 @@
+-
+  var personalInfo = {
+    name: 'Kiryl Arlouski',
+    title: 'Senior Frontend Developer',
+    location: 'Warsaw, Poland',
+    email: 'k.smolniy@gmail.com',
+    linkedin: {
+      url: 'https://www.linkedin.com/in/kiryl-arlouski/',
+      text: 'LinkedIn'
+    },
+    avatar: './images/avatar-compressed.jpg'
+  }
+
+  var skills = [
+    { category: 'Languages', items: 'JavaScript (ES6+), TypeScript' },
+    { category: 'Frontend', items: 'React, React Hooks' },
+    { category: 'Mobile', items: 'React Native (iOS, Android)' },
+    { category: 'State & Forms', items: 'Formik, React Query' },
+    { category: 'Styling', items: 'SASS/SCSS, styled-components' },
+    { category: 'Testing', items: 'Jest, React Testing Library' },
+    { category: 'Build Tools', items: 'Webpack, Vite' },
+    { category: 'APIs', items: 'REST, GraphQL' },
+    { category: 'Accessibility', items: 'WCAG, W3C' },
+    { category: 'Documentation', items: 'Storybook' },
+    { category: 'AI Agents', items: 'Github Copilot' },
+    { category: 'Other', items: 'Software Design, Data Structures' }
+  ]
+
+  var jobs = [
+    {
+      company: 'EPAM Systems',
+      title: 'Senior Frontend Developer',
+      period: 'Nov 2022 – Present',
+      location: 'Poland (Hybrid)',
+      responsibilities: [
+        'Develop and maintain enterprise-scale web applications using React, React Native and TypeScript',
+        'Implement accessible UI solutions compliant with WCAG/W3C standards',
+        'Perform demo presentations for clients',
+        'Adopt AI agents to accelerate development and improve test coverage quality',
+        'Write unit tests and Storybook stories, and participate in code reviews to improve long-term code maintainability',
+        'Collaborate with backend, QA, and product teams in an agile environment'
+      ]
+    },
+    {
+      company: 'EPAM Systems',
+      title: 'Frontend Engineer',
+      period: 'Nov 2018 – Nov 2022',
+      location: 'Poland/Belarus',
+      responsibilities: [
+        'Developed UI features for production web applications',
+        'Maintained high code quality through code reviews, test writing, and Storybook development',
+        'Integrated frontend with backend APIs',
+        'Participated in Scrum ceremonies',
+        'Improved performance of web applications',
+        'Enhanced UI accessibility',
+        'Refactored legacy code'
+      ]
+    },
+    {
+      company: 'iTechArt Group',
+      title: 'Frontend Engineer',
+      period: 'Aug 2018 – Oct 2018',
+      location: 'Minsk, Belarus',
+      responsibilities: []
+    },
+    {
+      company: 'Ultralab',
+      title: 'Frontend Engineer',
+      period: 'Jan 2018 – Jul 2018',
+      location: 'Minsk, Belarus',
+      responsibilities: []
+    },
+    {
+      company: 'LWO (Light Well Organization)',
+      title: 'Frontend Developer',
+      period: 'Sep 2017 – Jan 2018',
+      location: 'Minsk, Belarus',
+      responsibilities: []
+    }
+  ]
+
+  var education = [
+    {
+      institution: 'Belarusian State University of Informatics and Radioelectronics (BSUIR)',
+      degree: "Bachelor's degree - Computer Technologies (2017 – 2021)"
+    },
+    {
+      institution: 'BSUIR Affiliate "Minsk Radioengineering College"',
+      degree: 'Specialist Degree — Software Programming Technologies (2013 – 2017)'
+    }
+  ]
+
+  var languages = [
+    { name: 'English', level: 'Upper-Intermediate (B2+)' },
+    { name: 'Polish', level: 'Upper-Intermediate (B2)' },
+    { name: 'Russian', level: 'Native' },
+    { name: 'Belarusian', level: 'Native' }
+  ]
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= `${personalInfo.name} — ${personalInfo.title}`
+
+    style.
+      :root {
+        --text: #1f2937;
+        --muted: #6b7280;
+        --accent: #2563eb;
+        --bg: #ffffff;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Inter, Helvetica, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 4px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-top: 24px;
+        margin-bottom: 12px;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 6px;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .subtitle {
+        font-size: 18px;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+
+      .contact {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 32px;
+      }
+
+      .contact a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      p {
+        margin: 8px 0;
+      }
+
+      ul {
+        margin: 8px 0 16px 20px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .job {
+        margin-bottom: 28px;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .job-meta {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 12px 24px;
+        font-size: 14px;
+      }
+
+      .skills span {
+        display: block;
+      }
+
+      .education {
+        margin-bottom: 16px;
+      }
+      
+      .avatar {
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+      }
+
+  body
+    .container
+      header
+        img.avatar(src=personalInfo.avatar)
+        div
+          h1= personalInfo.name
+          .subtitle= personalInfo.title
+          .contact
+            | #{personalInfo.location} ·
+            = ' '
+            a(href=personalInfo.linkedin.url)= personalInfo.linkedin.text
+            |  · Email: #{personalInfo.email}
+
+      section
+        h2 Professional Summary
+        p
+          | Senior Frontend Developer with 
+          strong 7+ years of commercial experience
+          |  building scalable, accessible, and high-performance web applications.
+          | Strong expertise in 
+          strong React, React Native, TypeScript
+          | , modern frontend tooling,
+          | and web accessibility (WCAG/W3C). Experienced in enterprise environments,
+          | cross-team collaboration, and mentoring engineers.
+
+      section
+        h2 Core Skills
+        .skills
+          each skill in skills
+            span
+              strong= `${skill.category}:`
+              = ` ${skill.items}`
+
+      section
+        h2 Professional Experience
+        each job in jobs
+          .job
+            .job-header
+              h3= `${job.company} — ${job.title}`
+              .job-meta= `${job.period} · ${job.location}`
+            if job.responsibilities && job.responsibilities.length > 0
+              ul
+                each responsibility in job.responsibilities
+                  li= responsibility
+
+      section
+        h2 Education
+        each edu in education
+          .education
+            strong= edu.institution
+            br
+            = edu.degree
+
+      section
+        h2 Languages
+        ul
+          each lang in languages
+            li= `${lang.name} — ${lang.level}`

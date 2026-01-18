@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "build": "pug index.pug -o . -P",
+    "build:pdf": "node htmlToPdf.js",
+    "dev": "nodemon --watch index.pug --ext pug --exec \"npm run build\""
+  },
   "dependencies": {
-    "puppeteer": "^21.0.0"
+    "nodemon": "^3.1.11",
+    "pug-cli": "^1.0.0-alpha6",
+    "puppeteer": "^24.35.0"
   }
 }
