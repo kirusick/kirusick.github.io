@@ -216,12 +216,37 @@ html(lang="en")
         gap: 24px;
       }
 
+      .non-breakable {
+        white-space: nowrap;
+      }
+
       @media print {
         body {
           padding: 20px;
         }
+        .professional-summary h2 {
+          margin-top: 12px;
+        }
       }
 
+      @media (max-width: 720px) {
+        body {
+          padding: 16px;
+        }
+        header {
+          flex-direction: column;
+          gap: 0px;
+        }
+        header h1 {
+          margin-top: 12px;
+        }
+        .contact {
+          margin-bottom: 0px;
+        }
+        ul {
+          padding-inline-start: 12px;
+        }
+      }
   body
     .container
       header
@@ -233,14 +258,17 @@ html(lang="en")
             | #{personalInfo.location} ·
             = ' '
             a(href=personalInfo.linkedin.url)= personalInfo.linkedin.text
-            |  · Email: #{personalInfo.email}
+            |  · 
+            span.non-breakable Email: 
+            a(href=`mailto:${personalInfo.email}`)=personalInfo.email
 
-      section
+      section.professional-summary
         h2 Professional Summary
         p
           | Senior Frontend Developer with 
           strong 7+ years of commercial experience
           |  building scalable, accessible, and high-performance web applications.
+        p 
           | Strong expertise in 
           strong React, React Native, TypeScript
           | , modern frontend tooling,
@@ -268,15 +296,15 @@ html(lang="en")
                   li= responsibility
 
       section
+        h2 Languages
+        ul.languages
+          each lang in languages
+            li= `${lang.name} — ${lang.level}`
+
+      section
         h2 Education
         each edu in education
           .education
             strong= edu.institution
             br
             = edu.degree
-
-      section
-        h2 Languages
-        ul
-          each lang in languages
-            li= `${lang.name} — ${lang.level}`

@@ -29,7 +29,7 @@ const fs = require('fs');
     });
 
     await browser.close();
-    console.log('PDF generated successfully: index.pdf');
+    console.log('PDF generated successfully: cv.pdf');
   } catch (error) {
     console.error('Error generating PDF:', error);
     process.exit(1);

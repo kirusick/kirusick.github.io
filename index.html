@@ -116,12 +116,37 @@
         gap: 24px;
       }
       
+      .non-breakable {
+        white-space: nowrap;
+      }
+      
       @media print {
         body {
           padding: 20px;
         }
+        .professional-summary h2 {
+          margin-top: 12px;
+        }
       }
       
+      @media (max-width: 720px) {
+        body {
+          padding: 16px;
+        }
+        header {
+          flex-direction: column;
+          gap: 0px;
+        }
+        header h1 {
+          margin-top: 12px;
+        }
+        .contact {
+          margin-bottom: 0px;
+        }
+        ul {
+          padding-inline-start: 12px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -130,14 +155,15 @@
         <div>
           <h1>Kiryl Arlouski</h1>
           <div class="subtitle">Senior Frontend Developer</div>
-          <div class="contact">Warsaw, Poland · <a href="https://www.linkedin.com/in/kiryl-arlouski/">LinkedIn</a> · Email: k.smolniy@gmail.com
+          <div class="contact">Warsaw, Poland · <a href="https://www.linkedin.com/in/kiryl-arlouski/">LinkedIn</a> · <span class="non-breakable">Email: </span><a href="mailto:k.smolniy@gmail.com">k.smolniy@gmail.com</a>
           </div>
         </div>
       </header>
-      <section>
+      <section class="professional-summary">
         <h2>Professional Summary</h2>
-        <p>Senior Frontend Developer with <strong>7+ years of commercial experience</strong> building scalable, accessible, and high-performance web applications.
-          Strong expertise in <strong>React, React Native, TypeScript</strong>, modern frontend tooling,
+        <p>Senior Frontend Developer with <strong>7+ years of commercial experience</strong> building scalable, accessible, and high-performance web applications.</p>
+        <p>
+           Strong expertise in <strong>React, React Native, TypeScript</strong>, modern frontend tooling,
           and web accessibility (WCAG/W3C). Experienced in enterprise environments,
           cross-team collaboration, and mentoring engineers.
         </p>
@@ -198,20 +224,20 @@
         </div>
       </section>
       <section>
-        <h2>Education</h2>
-        <div class="education"><strong>Belarusian State University of Informatics and Radioelectronics (BSUIR)</strong><br>Bachelor's degree - Computer Technologies (2017 – 2021)
-        </div>
-        <div class="education"><strong>BSUIR Affiliate &quot;Minsk Radioengineering College&quot;</strong><br>Specialist Degree — Software Programming Technologies (2013 – 2017)
-        </div>
-      </section>
-      <section>
         <h2>Languages</h2>
-        <ul>
+        <ul class="languages">
           <li>English — Upper-Intermediate (B2+)</li>
           <li>Polish — Upper-Intermediate (B2)</li>
           <li>Russian — Native</li>
           <li>Belarusian — Native</li>
         </ul>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <div class="education"><strong>Belarusian State University of Informatics and Radioelectronics (BSUIR)</strong><br>Bachelor's degree - Computer Technologies (2017 – 2021)
+        </div>
+        <div class="education"><strong>BSUIR Affiliate &quot;Minsk Radioengineering College&quot;</strong><br>Specialist Degree — Software Programming Technologies (2013 – 2017)
+        </div>
       </section>
     </div>
   </body>
