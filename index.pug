@@ -227,6 +227,9 @@ html(lang="en")
         .professional-summary h2 {
           margin-top: 12px;
         }
+        .cv-pdf {
+          display: none;
+        }
       }
 
       @media (max-width: 720px) {
@@ -262,6 +265,8 @@ html(lang="en")
             |  · 
             span.non-breakable Email: 
             a(href=`mailto:${personalInfo.email}`)=personalInfo.email
+            span.cv-pdf  · 
+            a.cv-pdf(href='./cv.pdf') CV.pdf
 
       section.professional-summary
         h2 Professional Summary
