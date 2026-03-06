@@ -8,22 +8,26 @@
       url: 'https://www.linkedin.com/in/kiryl-arlouski/',
       text: 'LinkedIn'
     },
+    github: {
+      url: 'https://github.com/yourname',
+      text: 'GitHub'
+    },
     avatar: './images/avatar-compressed.jpg'
   }
 
   var skills = [
     { category: 'Languages', items: 'JavaScript (ES6+), TypeScript' },
-    { category: 'Frontend', items: 'React, React Hooks' },
+    { category: 'Frontend', items: 'React, Next, React Hooks' },
     { category: 'Mobile', items: 'React Native (iOS, Android)' },
-    { category: 'State & Forms', items: 'Formik, React Query' },
+    { category: 'State Management', items: 'React Query, Context API, Redux' },
     { category: 'Styling', items: 'SASS/SCSS, styled-components' },
-    { category: 'Testing', items: 'Jest, React Testing Library' },
+    { category: 'Testing', items: 'Jest, Vi-test, React Testing Library' },
     { category: 'Build Tools', items: 'Webpack, Vite' },
     { category: 'APIs', items: 'REST, GraphQL' },
-    { category: 'Accessibility', items: 'WCAG, W3C' },
-    { category: 'Documentation', items: 'Storybook' },
-    { category: 'AI Agents', items: 'Github Copilot' },
-    { category: 'Other', items: 'Software Design, Data Structures' }
+    { category: 'UI Development', items: 'Design Systems, Storybook' },
+    { category: 'Accessibility', items: 'WCAG, W3C standards' },
+    { category: 'Architecture', items: 'Microfrontend, Feature-Base Structure, Component Architecture, Scalable Frontend Design' },
+    { category: 'Performance', items: 'Code Splitting, Lazy Loading, Rendering Optimization, Web vitals' }
   ]
 
   var jobs = [
@@ -33,12 +37,13 @@
       period: 'Nov 2022 – Present',
       location: 'Poland (Hybrid)',
       responsibilities: [
-        'Develop and maintain enterprise-scale web applications using React, React Native and TypeScript',
-        'Implement accessible UI solutions compliant with WCAG/W3C standards',
-        'Perform demo presentations for clients',
-        'Adopt AI agents to accelerate development and improve test coverage quality',
-        'Write unit tests and Storybook stories, and participate in code reviews to improve long-term code maintainability',
-        'Collaborate with backend, QA, and product teams in an agile environment'
+        'Develop scalable frontend applications using React and TypeScript in enterprise environments',
+        'Design reusable and maintainable UI components and implement them within a shared design system',
+        'Implement accessible UI solutions compliant with WCAG standards',
+        'Optimize application performance through code splitting, lazy loading and rendering optimizations',
+        'Collaborate with backend engineers, designers and product teams to deliver production features',
+        'Mentor junior developers and participate in code reviews to maintain high engineering standards',
+        'Write unit tests using Jest and React Testing Library to improve reliability of frontend features'
       ]
     },
     {
@@ -47,13 +52,12 @@
       period: 'Nov 2018 – Nov 2022',
       location: 'Poland/Belarus',
       responsibilities: [
-        'Developed UI features for production web applications',
-        'Maintained high code quality through code reviews, test writing, and Storybook development',
-        'Integrated frontend with backend APIs',
-        'Participated in Scrum ceremonies',
-        'Improved performance of web applications',
-        'Enhanced UI accessibility',
-        'Refactored legacy code'
+        'Developed production UI features using React and modern JavaScript',
+        'Integrated frontend applications with REST and GraphQL APIs',
+        'Improved application performance and maintainability through refactoring and optimization',
+        'Enhanced accessibility of user interfaces following WCAG standards',
+        'Maintained high code quality through code reviews and automated testing',
+        'Collaborated with cross-functional teams in Agile development processes'
       ]
     },
     {
@@ -61,21 +65,27 @@
       title: 'Frontend Engineer',
       period: 'Aug 2018 – Oct 2018',
       location: 'Minsk, Belarus',
-      responsibilities: []
+      responsibilities: [
+        'Developed frontend components for web applications using JavaScript and modern frontend tooling'
+      ]
     },
     {
       company: 'Ultralab',
       title: 'Frontend Engineer',
       period: 'Jan 2018 – Jul 2018',
       location: 'Minsk, Belarus',
-      responsibilities: []
+      responsibilities: [
+        'Built UI features and collaborated with backend developers to integrate APIs'
+      ]
     },
     {
       company: 'LWO (Light Well Organization)',
       title: 'Frontend Developer',
       period: 'Sep 2017 – Jan 2018',
       location: 'Minsk, Belarus',
-      responsibilities: []
+      responsibilities: [
+        'Developed responsive user interfaces using JavaScript, HTML and CSS'
+      ]
     }
   ]
 
@@ -178,6 +188,14 @@ html(lang="en")
         margin-bottom: 28px;
       }
 
+      .job ul {
+        margin-top: 8px;
+      }
+
+      .job li {
+        line-height: 1.5;
+      }
+
       .job-header {
         display: flex;
         justify-content: space-between;
@@ -230,6 +248,12 @@ html(lang="en")
         .cv-pdf {
           display: none;
         }
+        .page-break {
+          padding-top: 140px;
+        }
+        .languages-section {
+          padding-top: 40px;
+        }
       }
 
       @media (max-width: 720px) {
@@ -265,6 +289,8 @@ html(lang="en")
             |  · 
             span.non-breakable Email: 
             a(href=`mailto:${personalInfo.email}`)=personalInfo.email
+            |  · 
+            a(href=personalInfo.github.url)= personalInfo.github.text
             span.cv-pdf  · 
             a.cv-pdf(href='./cv.pdf') CV.pdf
 
@@ -272,14 +298,14 @@ html(lang="en")
         h2 Professional Summary
         p
           | Senior Frontend Developer with 
-          strong 7+ years of commercial experience
-          |  building scalable, accessible, and high-performance web applications.
-        p 
-          | Strong expertise in 
-          strong React, React Native, TypeScript
-          | , modern frontend tooling,
-          | and web accessibility (WCAG/W3C). Experienced in enterprise environments,
-          | cross-team collaboration, and mentoring engineers.
+          strong 8+ years of commercial experience 
+          | building scalable web applications using 
+          strong React and TypeScript.
+        p
+          | Experienced in designing maintainable frontend architectures, improving application performance and building accessible user interfaces compliant with 
+          strong WCAG standards.
+        p
+          | Strong background in enterprise environments, cross-team collaboration and mentoring developers. Passionate about building reliable, maintainable and high-quality frontend systems.
 
       section
         h2 Core Skills
@@ -301,7 +327,8 @@ html(lang="en")
                 each responsibility in job.responsibilities
                   li= responsibility
 
-      section
+      div.page-break
+      section.languages-section
         h2 Languages
         ul.languages
           each lang in languages

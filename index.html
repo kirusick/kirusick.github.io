@@ -78,6 +78,14 @@
         margin-bottom: 28px;
       }
       
+      .job ul {
+        margin-top: 8px;
+      }
+      
+      .job li {
+        line-height: 1.5;
+      }
+      
       .job-header {
         display: flex;
         justify-content: space-between;
@@ -130,6 +138,12 @@
         .cv-pdf {
           display: none;
         }
+        .page-break {
+          padding-top: 140px;
+        }
+        .languages-section {
+          padding-top: 40px;
+        }
       }
       
       @media (max-width: 720px) {
@@ -159,22 +173,19 @@
         <div>
           <h1>Kiryl Arlouski</h1>
           <div class="subtitle">Senior Frontend Developer</div>
-          <div class="contact">Warsaw, Poland · <a href="https://www.linkedin.com/in/kiryl-arlouski/">LinkedIn</a> · <span class="non-breakable">Email: </span><a href="mailto:k.smolniy@gmail.com">k.smolniy@gmail.com</a><span class="cv-pdf"> · </span><a class="cv-pdf" href="./cv.pdf">CV.pdf</a>
+          <div class="contact">Warsaw, Poland · <a href="https://www.linkedin.com/in/kiryl-arlouski/">LinkedIn</a> · <span class="non-breakable">Email: </span><a href="mailto:k.smolniy@gmail.com">k.smolniy@gmail.com</a> · <a href="https://github.com/yourname">GitHub</a><span class="cv-pdf"> · </span><a class="cv-pdf" href="./cv.pdf">CV.pdf</a>
           </div>
         </div>
       </header>
       <section class="professional-summary">
         <h2>Professional Summary</h2>
-        <p>Senior Frontend Developer with <strong>7+ years of commercial experience</strong> building scalable, accessible, and high-performance web applications.</p>
-        <p>
-           Strong expertise in <strong>React, React Native, TypeScript</strong>, modern frontend tooling,
-          and web accessibility (WCAG/W3C). Experienced in enterprise environments,
-          cross-team collaboration, and mentoring engineers.
-        </p>
+        <p>Senior Frontend Developer with <strong>8+ years of commercial experience </strong>building scalable web applications using <strong>React and TypeScript.</strong></p>
+        <p>Experienced in designing maintainable frontend architectures, improving application performance and building accessible user interfaces compliant with <strong>WCAG standards.</strong></p>
+        <p>Strong background in enterprise environments, cross-team collaboration and mentoring developers. Passionate about building reliable, maintainable and high-quality frontend systems.</p>
       </section>
       <section>
         <h2>Core Skills</h2>
-        <div class="skills"><span><strong>Languages:</strong> JavaScript (ES6+), TypeScript</span><span><strong>Frontend:</strong> React, React Hooks</span><span><strong>Mobile:</strong> React Native (iOS, Android)</span><span><strong>State &amp; Forms:</strong> Formik, React Query</span><span><strong>Styling:</strong> SASS/SCSS, styled-components</span><span><strong>Testing:</strong> Jest, React Testing Library</span><span><strong>Build Tools:</strong> Webpack, Vite</span><span><strong>APIs:</strong> REST, GraphQL</span><span><strong>Accessibility:</strong> WCAG, W3C</span><span><strong>Documentation:</strong> Storybook</span><span><strong>AI Agents:</strong> Github Copilot</span><span><strong>Other:</strong> Software Design, Data Structures</span>
+        <div class="skills"><span><strong>Languages:</strong> JavaScript (ES6+), TypeScript</span><span><strong>Frontend:</strong> React, Next, React Hooks</span><span><strong>Mobile:</strong> React Native (iOS, Android)</span><span><strong>State Management:</strong> React Query, Context API, Redux</span><span><strong>Styling:</strong> SASS/SCSS, styled-components</span><span><strong>Testing:</strong> Jest, Vi-test, React Testing Library</span><span><strong>Build Tools:</strong> Webpack, Vite</span><span><strong>APIs:</strong> REST, GraphQL</span><span><strong>UI Development:</strong> Design Systems, Storybook</span><span><strong>Accessibility:</strong> WCAG, W3C standards</span><span><strong>Architecture:</strong> Microfrontend, Feature-Base Structure, Component Architecture, Scalable Frontend Design</span><span><strong>Performance:</strong> Code Splitting, Lazy Loading, Rendering Optimization, Web vitals</span>
         </div>
       </section>
       <section>
@@ -185,12 +196,13 @@
             <div class="job-meta">Nov 2022 – Present · Poland (Hybrid)</div>
           </div>
           <ul>
-            <li>Develop and maintain enterprise-scale web applications using React, React Native and TypeScript</li>
-            <li>Implement accessible UI solutions compliant with WCAG/W3C standards</li>
-            <li>Perform demo presentations for clients</li>
-            <li>Adopt AI agents to accelerate development and improve test coverage quality</li>
-            <li>Write unit tests and Storybook stories, and participate in code reviews to improve long-term code maintainability</li>
-            <li>Collaborate with backend, QA, and product teams in an agile environment</li>
+            <li>Develop scalable frontend applications using React and TypeScript in enterprise environments</li>
+            <li>Design reusable and maintainable UI components and implement them within a shared design system</li>
+            <li>Implement accessible UI solutions compliant with WCAG standards</li>
+            <li>Optimize application performance through code splitting, lazy loading and rendering optimizations</li>
+            <li>Collaborate with backend engineers, designers and product teams to deliver production features</li>
+            <li>Mentor junior developers and participate in code reviews to maintain high engineering standards</li>
+            <li>Write unit tests using Jest and React Testing Library to improve reliability of frontend features</li>
           </ul>
         </div>
         <div class="job">
@@ -199,13 +211,12 @@
             <div class="job-meta">Nov 2018 – Nov 2022 · Poland/Belarus</div>
           </div>
           <ul>
-            <li>Developed UI features for production web applications</li>
-            <li>Maintained high code quality through code reviews, test writing, and Storybook development</li>
-            <li>Integrated frontend with backend APIs</li>
-            <li>Participated in Scrum ceremonies</li>
-            <li>Improved performance of web applications</li>
-            <li>Enhanced UI accessibility</li>
-            <li>Refactored legacy code</li>
+            <li>Developed production UI features using React and modern JavaScript</li>
+            <li>Integrated frontend applications with REST and GraphQL APIs</li>
+            <li>Improved application performance and maintainability through refactoring and optimization</li>
+            <li>Enhanced accessibility of user interfaces following WCAG standards</li>
+            <li>Maintained high code quality through code reviews and automated testing</li>
+            <li>Collaborated with cross-functional teams in Agile development processes</li>
           </ul>
         </div>
         <div class="job">
@@ -213,21 +224,31 @@
             <h3>iTechArt Group — Frontend Engineer</h3>
             <div class="job-meta">Aug 2018 – Oct 2018 · Minsk, Belarus</div>
           </div>
+          <ul>
+            <li>Developed frontend components for web applications using JavaScript and modern frontend tooling</li>
+          </ul>
         </div>
         <div class="job">
           <div class="job-header">
             <h3>Ultralab — Frontend Engineer</h3>
             <div class="job-meta">Jan 2018 – Jul 2018 · Minsk, Belarus</div>
           </div>
+          <ul>
+            <li>Built UI features and collaborated with backend developers to integrate APIs</li>
+          </ul>
         </div>
         <div class="job">
           <div class="job-header">
             <h3>LWO (Light Well Organization) — Frontend Developer</h3>
             <div class="job-meta">Sep 2017 – Jan 2018 · Minsk, Belarus</div>
           </div>
+          <ul>
+            <li>Developed responsive user interfaces using JavaScript, HTML and CSS</li>
+          </ul>
         </div>
       </section>
-      <section>
+      <div class="page-break"></div>
+      <section class="languages-section">
         <h2>Languages</h2>
         <ul class="languages">
           <li>English — Upper-Intermediate (B2+)</li>

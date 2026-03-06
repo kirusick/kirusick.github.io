@@ -21,8 +21,6 @@ const fs = require('fs');
       printBackground: true,
       scale: 0.65,
       margin: {
-        // top: '20mm',
-        // bottom: '20mm',
         right: '10mm',
         left: '10mm'
       }
