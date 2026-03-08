@@ -17,17 +17,67 @@
 
   var skills = [
     { category: 'Languages', items: 'JavaScript (ES6+), TypeScript' },
-    { category: 'Frontend', items: 'React, Next, React Hooks' },
+    { category: 'Frontend', items: 'React, Next.js, React Hooks' },
     { category: 'Mobile', items: 'React Native (iOS, Android)' },
-    { category: 'State Management', items: 'React Query, Context API, Redux' },
+    { category: 'State Management', items: 'React Query, Redux, Context API' },
     { category: 'Styling', items: 'SASS/SCSS, styled-components' },
-    { category: 'Testing', items: 'Jest, Vi-test, React Testing Library' },
-    { category: 'Build Tools', items: 'Webpack, Vite' },
+    { category: 'Testing', items: 'Jest, Vitest, React Testing Library' },
+    { category: 'Build Tools', items: 'Webpack, Vite, Nx Monorepos' },
     { category: 'APIs', items: 'REST, GraphQL' },
     { category: 'UI Development', items: 'Design Systems, Storybook' },
-    { category: 'Accessibility', items: 'WCAG, W3C standards' },
-    { category: 'Architecture', items: 'Microfrontend, Feature-Base Structure, Component Architecture, Scalable Frontend Design' },
-    { category: 'Performance', items: 'Code Splitting, Lazy Loading, Rendering Optimization, Web vitals' }
+    { category: 'Architecture', items: 'Component Architecture, Feature-Based Structure, Microfrontends' },
+    { category: 'Performance', items: 'Code Splitting, Lazy Loading, Rendering Optimization, Web Vitals' },
+    { category: 'Accessibility', items: 'WCAG / W3C standards' }
+  ]
+
+  var projects = [
+    {
+      title: 'Enterprise Web Banking Platform',
+      description: 'Large-scale web banking platform aimed at improving digital customer experience and enabling faster release cycles for a major financial institution.',
+      highlights: [
+        'Developed core web UI features using React and TypeScript',
+        'Contributed to modernization of frontend architecture and reusable component libraries',
+        'Optimized rendering and data fetching flows improving application responsiveness and perceived performance',
+        'Collaborated with cross-functional teams (5–6 FE, 5–6 mobile, backend, QA, analysts) to support frequent product releases',
+        'Supported platform used by millions of banking customers'
+      ],
+      impact: [
+        'Digital banking platforms serve billions of users globally',
+        'Mobile banking applications now process more than 60% of banking transactions worldwide',
+        'Digital channels handle up to 78% of banking customer interactions'
+      ]
+    },
+
+    {
+      title: 'Global Logistics Transportation Management System',
+      description: 'Enterprise transportation management platform coordinating shipments across global logistics operations.',
+      highlights: [
+        'Developed complex UI workflows for shipment lifecycle management using React and TypeScript',
+        'Implemented reusable components and form workflows using modern validation and state management libraries',
+        'Collaborated with distributed engineering teams including architects, DevOps and QA',
+        'Contributed to scalable frontend architecture in Nx monorepo environment',
+        'Supported logistics workflows coordinating shipments across multiple delivery stages (first-mile to last-mile)'
+      ],
+      impact: [
+        'Enterprise logistics platforms often coordinate thousands of shipments daily across global supply chains',
+        'Improved reliability and maintainability of mission-critical operational tools used by distributed logistics teams'
+      ]
+    },
+
+    {
+      title: 'Healthcare & Retail Digital Platform',
+      description: 'Large enterprise platform improving digital access to healthcare services and consumer retail experience.',
+      highlights: [
+        'Developed cross-platform mobile application features using React Native and GraphQL APIs',
+        'Collaborated with backend teams on BFF contract design and API integration',
+        'Delivered UI features and demos to client stakeholders in an Agile environment',
+        'Improved frontend code quality through automated tests and code reviews'
+      ],
+      impact: [
+        'Digital healthcare platforms are increasingly used by millions of customers to access services and manage health data',
+        'Mobile-first experiences significantly increase customer engagement and service accessibility'
+      ]
+    }
   ]
 
   var jobs = [
@@ -35,29 +85,29 @@
       company: 'EPAM Systems',
       title: 'Senior Frontend Developer',
       period: 'Nov 2022 – Present',
-      location: 'Poland (Hybrid)',
+      location: 'Poland',
       responsibilities: [
-        'Develop scalable frontend applications using React and TypeScript in enterprise environments',
-        'Design reusable and maintainable UI components and implement them within a shared design system',
-        'Implement accessible UI solutions compliant with WCAG standards',
-        'Optimize application performance through code splitting, lazy loading and rendering optimizations',
-        'Collaborate with backend engineers, designers and product teams to deliver production features',
-        'Mentor junior developers and participate in code reviews to maintain high engineering standards',
-        'Write unit tests using Jest and React Testing Library to improve reliability of frontend features'
+        'Develop scalable web applications using React and TypeScript in enterprise environments',
+        'Design reusable UI components and contribute to shared design systems',
+        'Optimize frontend performance through code splitting, lazy loading and bundle optimization',
+        'Implement accessible user interfaces compliant with WCAG standards',
+        'Participate in technical planning and backlog grooming with product teams',
+        'Conduct code reviews and mentor junior developers',
+        'Collaborate with backend engineers, QA and product teams in Agile environments'
       ]
     },
     {
       company: 'EPAM Systems',
       title: 'Frontend Engineer',
       period: 'Nov 2018 – Nov 2022',
-      location: 'Poland/Belarus',
+      location: 'Poland / Belarus',
       responsibilities: [
         'Developed production UI features using React and modern JavaScript',
+        'Built frontend functionality for large-scale web and mobile applications',
+        'Improved performance through dependency optimization and bundle splitting',
         'Integrated frontend applications with REST and GraphQL APIs',
-        'Improved application performance and maintainability through refactoring and optimization',
-        'Enhanced accessibility of user interfaces following WCAG standards',
-        'Maintained high code quality through code reviews and automated testing',
-        'Collaborated with cross-functional teams in Agile development processes'
+        'Enhanced accessibility of interfaces following WCAG standards',
+        'Maintained high code quality through automated testing and code reviews'
       ]
     },
     {
@@ -66,7 +116,9 @@
       period: 'Aug 2018 – Oct 2018',
       location: 'Minsk, Belarus',
       responsibilities: [
-        'Developed frontend components for web applications using JavaScript and modern frontend tooling'
+        'Developed UI components for a marketing automation platform using React',
+        'Implemented new product features and supported legacy frontend code',
+        'Collaborated with distributed teams in Agile workflows'
       ]
     },
     {
@@ -75,7 +127,9 @@
       period: 'Jan 2018 – Jul 2018',
       location: 'Minsk, Belarus',
       responsibilities: [
-        'Built UI features and collaborated with backend developers to integrate APIs'
+        'Developed UI features for a digital advertising platform',
+        'Implemented responsive interfaces using JavaScript, HTML and CSS',
+        'Integrated frontend with backend APIs and participated in sprint planning'
       ]
     },
     {
@@ -84,7 +138,9 @@
       period: 'Sep 2017 – Jan 2018',
       location: 'Minsk, Belarus',
       responsibilities: [
-        'Developed responsive user interfaces using JavaScript, HTML and CSS'
+        'Developed single-page web applications interacting with REST APIs',
+        'Implemented cross-browser compatible UI components',
+        'Maintained and refactored existing frontend codebase'
       ]
     }
   ]
@@ -249,7 +305,7 @@ html(lang="en")
           display: none;
         }
         .page-break {
-          padding-top: 140px;
+          padding-top: 80px;
         }
         .languages-section {
           padding-top: 40px;
@@ -275,45 +331,37 @@ html(lang="en")
           padding-inline-start: 12px;
         }
       }
+
   body
     .container
+
       header
         img.avatar(src=personalInfo.avatar)
         div
           h1= personalInfo.name
           .subtitle= personalInfo.title
           .contact
-            | #{personalInfo.location} ·
-            = ' '
+            | #{personalInfo.location} · 
             a(href=personalInfo.linkedin.url)= personalInfo.linkedin.text
             |  · 
-            span.non-breakable Email: 
-            a(href=`mailto:${personalInfo.email}`)=personalInfo.email
-            |  · 
             a(href=personalInfo.github.url)= personalInfo.github.text
-            span.cv-pdf  · 
-            a.cv-pdf(href='./cv.pdf') CV.pdf
+            |  · 
+            a(href=`mailto:${personalInfo.email}`)= personalInfo.email
 
-      section.professional-summary
+      section
         h2 Professional Summary
         p
-          | Senior Frontend Developer with 
-          strong 8+ years of commercial experience 
-          | building scalable web applications using 
-          strong React and TypeScript.
+          | Senior Frontend Developer with 8+ years of experience building scalable web applications using React and TypeScript.
         p
-          | Experienced in designing maintainable frontend architectures, improving application performance and building accessible user interfaces compliant with 
-          strong WCAG standards.
-        p
-          | Strong background in enterprise environments, cross-team collaboration and mentoring developers. Passionate about building reliable, maintainable and high-quality frontend systems.
+          | Experienced in designing maintainable frontend architectures, optimizing performance, and building accessible user interfaces compliant with WCAG standards.
 
       section
         h2 Core Skills
         .skills
           each skill in skills
             span
-              strong= `${skill.category}:`
-              = ` ${skill.items}`
+              strong= `${skill.category}: `
+              = skill.items
 
       section
         h2 Professional Experience
@@ -322,13 +370,23 @@ html(lang="en")
             .job-header
               h3= `${job.company} — ${job.title}`
               .job-meta= `${job.period} · ${job.location}`
-            if job.responsibilities && job.responsibilities.length > 0
-              ul
-                each responsibility in job.responsibilities
-                  li= responsibility
+            ul
+              each r in job.responsibilities
+                li= r
 
       div.page-break
+      
       section.languages-section
+        h2 Selected Projects
+        each project in projects
+          .job
+            h3= project.title
+            p= project.description
+            ul
+              each item in project.highlights
+                li= item
+
+      section
         h2 Languages
         ul.languages
           each lang in languages
