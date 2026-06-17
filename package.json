@@ -1,9 +1,13 @@
 {
   "scripts": {
-    "build": "pug index.pug -o . -P",
-    "build:pdf": "node htmlToPdf.js",
-    "dev": "nodemon --watch index.pug --ext pug --exec \"npm run build\"",
-    "dev:pdf": "nodemon --watch index.pug --ext pug --exec \"npm run build && npm run build:pdf\""
+    "dev:fe": "nodemon --watch index.pug --ext pug --exec \"npm run build\"",
+    "build:fe": "pug index.pug -o . -P",
+    "dev:fe:pdf": "nodemon --watch index.pug --ext pug --exec \"npm run build && npm run build:pdf\"",
+    "build:fe:pdf": "node htmlToPdf.js",
+    "build:fs": "pug full-stack/index.pug -o full-stack/ -P",
+    "dev:fs": "nodemon --watch full-stack/index.pug --ext pug --exec \"npm run build:fs\"",
+    "build:fs:pdf": "node htmlToPdf.js full-stack",
+    "dev:fs:pdf": "nodemon --watch full-stack/index.pug --ext pug --exec \"npm run build:fs && npm run build:fs:pdf\""
   },
   "dependencies": {
     "nodemon": "^3.1.11",
