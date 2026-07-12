@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev:fe": "nodemon --watch index.pug --ext pug --exec \"npm run build\"",
+    "dev:fe": "nodemon --watch index.pug --ext pug --exec \"npm run build:fe\"",
     "build:fe": "pug index.pug -o . -P",
-    "dev:fe:pdf": "nodemon --watch index.pug --ext pug --exec \"npm run build && npm run build:pdf\"",
+    "dev:fe:pdf": "nodemon --watch index.pug --ext pug --exec \"npm run build:fe && npm run build:fe:pdf\"",
     "build:fe:pdf": "node htmlToPdf.js",
     "build:fs": "pug full-stack/index.pug -o full-stack/ -P",
     "dev:fs": "nodemon --watch full-stack/index.pug --ext pug --exec \"npm run build:fs\"",

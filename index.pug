@@ -8,25 +8,22 @@
       url: 'https://www.linkedin.com/in/kiryl-arlouski/',
       text: 'LinkedIn'
     },
-    github: {
-      url: 'https://github.com/kirusick',
-      text: 'GitHub'
-    },
+    github: null,
     avatar: './images/avatar-compressed.jpg'
   }
 
   var skills = [
-    { category: 'Languages', items: 'JavaScript (ES6+), TypeScript' },
-    { category: 'Frontend', items: 'React, Next.js, React Native, Redux, Zustand' },
-    { category: 'Testing', items: 'Jest, Vitest, React Testing Library' },
-    { category: 'Architecture', items: 'Component-driven architecture, Design Systems, Microfrontends, Monorepo (Nx), Scalable UI architecture' },
-    { category: 'Performance & Quality', items: 'Web Performance Optimization, Code Splitting, Lazy Loading, Lighthouse Optimization' },
-    { category: 'Tooling', items: 'Webpack, Vite, Nx, Git, CI/CD' },
-    { category: 'Mobile', items: 'React Native (iOS, Android)' },
-    { category: 'Styling', items: 'SASS/SCSS, styled-components' },
-    { category: 'APIs', items: 'REST, GraphQL' },
-    { category: 'UI Development', items: 'Design Systems, Storybook' },
-    { category: 'Accessibility', items: 'WCAG, semantic HTML, accessible component design' }
+    { category: 'Languages', items: ['JavaScript (ES6+)', 'TypeScript'] },
+    { category: 'Frontend', items: ['React', 'Next.js', 'React Native', 'Redux', 'Zustand'] },
+    { category: 'Testing', items: ['Jest', 'Vitest', 'React Testing Library'] },
+    { category: 'Architecture', items: ['Design Systems', 'Microfrontends', 'Monorepo'] },
+    { category: 'Performance & Quality', items: ['Web Performance Optimization', 'Code Splitting', 'Lazy Loading', 'Lighthouse Optimization'] },
+    { category: 'Tooling', items: ['Webpack', 'Vite', 'Nx', 'Git', 'CI/CD'] },
+    { category: 'Mobile', items: ['React Native (iOS, Android)'] },
+    { category: 'Styling', items: ['SASS/SCSS', 'styled-components'] },
+    { category: 'APIs', items: ['REST', 'GraphQL'] },
+    { category: 'UI Development', items: ['Design Systems', 'Storybook'] },
+    { category: 'Accessibility', items: ['WCAG', 'semantic HTML', 'accessible component design'] }
   ]
 
   var projects = [
@@ -75,7 +72,8 @@
       impact: [
         'Digital healthcare platforms are increasingly used by millions of customers to access services and manage health data',
         'Mobile-first experiences significantly increase customer engagement and service accessibility'
-      ]
+      ],
+      nextPage: true
     }
   ]
 
@@ -118,7 +116,8 @@
         'Developed UI components for a marketing automation platform using React',
         'Implemented new product features and supported legacy frontend code',
         'Collaborated with distributed teams in Agile workflows'
-      ]
+      ],
+      nextPage: true
     },
     {
       company: 'Ultralab',
@@ -132,7 +131,7 @@
       ]
     },
     {
-      company: 'LWO (Light Well Organization)',
+      company: 'LWO',
       title: 'Frontend Developer',
       period: 'Sep 2017 – Jan 2018',
       location: 'Minsk, Belarus',
@@ -156,10 +155,10 @@
   ]
 
   var languages = [
-    { name: 'English', level: 'Upper-Intermediate (B2+)' },
-    { name: 'Polish', level: 'Upper-Intermediate (B2)' },
-    { name: 'Russian', level: 'Native' },
-    { name: 'Belarusian', level: 'Native' }
+    { name: 'English', level: '' },
+    { name: 'Polish', level: '' },
+    { name: 'Belarusian', level: '' },
+    { name: 'Russian', level: '' }
   ]
 
 doctype html
@@ -245,6 +244,8 @@ html(lang="en")
 
       .job ul {
         margin-top: 8px;
+        padding-left: 24px;
+        padding-right: 8px;
       }
 
       .job li {
@@ -273,8 +274,46 @@ html(lang="en")
         display: block;
       }
 
+      .layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+      }
+
+      .main-column {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .sidebar-column {
+        width: 260px;
+        flex-shrink: 0;
+      }
+
+      .sidebar-column .skills {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
       .education {
         margin-bottom: 16px;
+      }
+
+      ul.languages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 8px;
+        margin: 8px 0 16px 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul.languages li {
+        margin-bottom: 0;
+      }
+
+      ul.languages li:not(:last-child)::after {
+        content: " · ";
       }
       
       .avatar {
@@ -303,8 +342,9 @@ html(lang="en")
         .cv-pdf {
           display: none;
         }
-        .page-break {
-          padding-top: 50px;
+        .page-break { break-after: page; }
+        .new-page-padding {
+          padding-top: 60px;
         }
         .languages-section {
           padding-top: 20px;
@@ -329,6 +369,13 @@ html(lang="en")
         ul {
           padding-inline-start: 12px;
         }
+        .layout {
+          flex-direction: column;
+          gap: 0;
+        }
+        .sidebar-column {
+          width: auto;
+        }
       }
 
   body
@@ -343,58 +390,82 @@ html(lang="en")
             | #{personalInfo.location} · 
             a(href=personalInfo.linkedin.url)= personalInfo.linkedin.text
             |  · 
-            a(href=personalInfo.github.url)= personalInfo.github.text
-            |  · 
+            if personalInfo.github
+              a(href=personalInfo.github.url)= personalInfo.github.text
+              |  · 
             a(href=`mailto:${personalInfo.email}`)= personalInfo.email
+            span.cv-pdf
+              |  · 
+              a(href="./cv.pdf")
+                | CV.pdf
 
-      section
-        h2 Professional Summary
-        p
-          | Senior Frontend Developer with 8+ years of experience building scalable web applications using React and TypeScript.
-          | Experienced in designing maintainable frontend architectures, optimizing performance, and building accessible user interfaces with
-          | strong focus on performance optimization, scalable UI architecture, accessibility (WCAG) and developer experience improvements in large monorepo environments.
+      .layout
+        .main-column
+          section
+            h2 Professional Summary
+            
+            p
+              | Senior Frontend Developer with 
+              b 8+ years of experience
+              |  building scalable web applications using 
+              b Next, React 
+              | and 
+              b TypeScript
+              | . Who enjoy making things that is working since a kid 
+            p
+              | My main goal is to move products forward and make developers' life easier, finding the struggle points and enhancing them.
+            p
+              | Experienced in building maintainable systems with 
+              | strong focus on performance, clean code and great user experience.
+              | Skilled in leading teams, driving innovation, and delivering high-impact
+              | solutions in startups and enterprises.
 
-      section
-        h2 Core Skills
-        .skills
-          each skill in skills
-            span
-              strong= `${skill.category}: `
-              = skill.items
+          section
+            h2 Professional Experience
+            each job in jobs
+              if job.nextPage
+                .page-break
+                .new-page-padding
+              .job
+                .job-header
+                  h3= `${job.company} — ${job.title}`
+                  .job-meta= `${job.period} · ${job.location}`
+                ul
+                  each r in job.responsibilities
+                    li= r
 
-      section
-        h2 Professional Experience
-        each job in jobs
-          .job
-            .job-header
-              h3= `${job.company} — ${job.title}`
-              .job-meta= `${job.period} · ${job.location}`
-            ul
-              each r in job.responsibilities
-                li= r
+          section.languages-section
+            h2 Selected Projects
+            each project in projects
+              if project.nextPage
+                .page-break
+                .new-page-padding
+              .job
+                h3= project.title
+                p= project.description
+                ul
+                  each item in project.highlights
+                    li= item
 
-      div.page-break
-      
-      section.languages-section
-        h2 Selected Projects
-        each project in projects
-          .job
-            h3= project.title
-            p= project.description
-            ul
-              each item in project.highlights
-                li= item
+          section
+            h2 Education
+            each edu in education
+              .education
+                strong= edu.institution
+                br
+                = edu.degree
 
-      section
-        h2 Languages
-        ul.languages
-          each lang in languages
-            li= `${lang.name} — ${lang.level}`
+        aside.sidebar-column
+          section
+            h2 Core Skills
+            .skills
+              each skill in skills
+                span
+                  strong= `${skill.category}: `
+                  = skill.items.join(', ')
 
-      section
-        h2 Education
-        each edu in education
-          .education
-            strong= edu.institution
-            br
-            = edu.degree
+          section
+            h2 Languages
+            ul.languages
+              each lang in languages
+                li= `${lang.name}`

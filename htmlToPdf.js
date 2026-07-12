@@ -22,7 +22,7 @@ const fs = require('fs');
       path: dir ? path.join(dir, pdfFileName) : pdfFileName,
       format: 'A4',
       printBackground: true,
-      scale: 0.65,
+      scale: 0.8,
       margin: {
         right: '10mm',
         left: '10mm'
