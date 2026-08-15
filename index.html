@@ -75,7 +75,7 @@
       }
       
       .job {
-        margin-bottom: 28px;
+        margin-bottom: 40px;
       }
       
       .job ul {
@@ -101,34 +101,13 @@
       
       .skills {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 12px 24px;
+        grid-template-columns: 1fr;
+        gap: 8px;
         font-size: 14px;
       }
       
       .skills span {
         display: block;
-      }
-      
-      .layout {
-        display: flex;
-        align-items: flex-start;
-        gap: 40px;
-      }
-      
-      .main-column {
-        flex: 1;
-        min-width: 0;
-      }
-      
-      .sidebar-column {
-        width: 260px;
-        flex-shrink: 0;
-      }
-      
-      .sidebar-column .skills {
-        grid-template-columns: 1fr;
-        gap: 8px;
       }
       
       .education {
@@ -178,12 +157,15 @@
         .cv-pdf {
           display: none;
         }
+        .avatar {
+          display: none;
+        }
+        .contact {
+          margin-bottom: 12px;
+        }
         .page-break { break-after: page; }
         .new-page-padding {
-          padding-top: 60px;
-        }
-        .languages-section {
-          padding-top: 20px;
+          padding-top: 100px;
         }
       }
       
@@ -205,13 +187,6 @@
         ul {
           padding-inline-start: 12px;
         }
-        .layout {
-          flex-direction: column;
-          gap: 0;
-        }
-        .sidebar-column {
-          width: auto;
-        }
       }
       
     </style>
@@ -222,152 +197,111 @@
         <div>
           <h1>Kiryl Arlouski</h1>
           <div class="subtitle">Senior Frontend Developer</div>
-          <div class="contact">Warsaw, Poland · <a href="https://www.linkedin.com/in/kiryl-arlouski/">LinkedIn</a> · <a href="mailto:k.smolniy@gmail.com">k.smolniy@gmail.com</a><span class="cv-pdf"> · <a href="./cv.pdf">CV.pdf</a></span>
+          <div class="contact">Warsaw, Poland · +48 578 438 351 · <a href="https://www.linkedin.com/in/kiryl-arlouski/">linkedin.com/in/kiryl-arlouski</a> · <a href="mailto:k.smolniy@gmail.com">k.smolniy@gmail.com</a><span class="cv-pdf"> · <a href="./cv.pdf">CV.pdf</a></span>
           </div>
         </div>
       </header>
-      <div class="layout">
-        <div class="main-column">
-          <section>
-            <h2>Professional Summary</h2>
-            <p>Senior Frontend Developer with <b>8+ years of experience</b> building scalable web applications using <b>Next, React </b>and <b>TypeScript</b>. Who enjoy making things that is working since a kid </p>
-            <p>My main goal is to move products forward and make developers' life easier, finding the struggle points and enhancing them.</p>
-            <p>
-              Experienced in building maintainable systems with 
-              strong focus on performance, clean code and great user experience.
-              Skilled in leading teams, driving innovation, and delivering high-impact
-              solutions in startups and enterprises.
-            </p>
-          </section>
-          <section>
-            <h2>Professional Experience</h2>
-            <div class="job">
-              <div class="job-header">
-                <h3>EPAM Systems — Senior Frontend Developer</h3>
-                <div class="job-meta">Nov 2022 – Present · Poland</div>
-              </div>
-              <ul>
-                <li>Develop scalable web applications using React and TypeScript in enterprise environments</li>
-                <li>Design reusable UI components and contribute to shared design systems</li>
-                <li>Optimize frontend performance through code splitting, lazy loading and bundle optimization</li>
-                <li>Implement accessible user interfaces compliant with WCAG standards</li>
-                <li>Participate in technical planning and backlog grooming with product teams</li>
-                <li>Conduct code reviews and mentor junior developers</li>
-                <li>Collaborate with backend engineers, QA and product teams in Agile environments</li>
-              </ul>
-            </div>
-            <div class="job">
-              <div class="job-header">
-                <h3>EPAM Systems — Frontend Engineer</h3>
-                <div class="job-meta">Nov 2018 – Nov 2022 · Poland / Belarus</div>
-              </div>
-              <ul>
-                <li>Developed production UI features using React and modern JavaScript</li>
-                <li>Built frontend functionality for large-scale web and mobile applications</li>
-                <li>Improved performance through dependency optimization and bundle splitting</li>
-                <li>Integrated frontend applications with REST and GraphQL APIs</li>
-                <li>Enhanced accessibility of interfaces following WCAG standards</li>
-                <li>Maintained high code quality through automated testing and code reviews</li>
-              </ul>
-            </div>
-            <div class="page-break"></div>
-            <div class="new-page-padding"></div>
-            <div class="job">
-              <div class="job-header">
-                <h3>iTechArt Group — Frontend Engineer</h3>
-                <div class="job-meta">Aug 2018 – Oct 2018 · Minsk, Belarus</div>
-              </div>
-              <ul>
-                <li>Developed UI components for a marketing automation platform using React</li>
-                <li>Implemented new product features and supported legacy frontend code</li>
-                <li>Collaborated with distributed teams in Agile workflows</li>
-              </ul>
-            </div>
-            <div class="job">
-              <div class="job-header">
-                <h3>Ultralab — Frontend Engineer</h3>
-                <div class="job-meta">Jan 2018 – Jul 2018 · Minsk, Belarus</div>
-              </div>
-              <ul>
-                <li>Developed UI features for a digital advertising platform</li>
-                <li>Implemented responsive interfaces using JavaScript, HTML and CSS</li>
-                <li>Integrated frontend with backend APIs and participated in sprint planning</li>
-              </ul>
-            </div>
-            <div class="job">
-              <div class="job-header">
-                <h3>LWO — Frontend Developer</h3>
-                <div class="job-meta">Sep 2017 – Jan 2018 · Minsk, Belarus</div>
-              </div>
-              <ul>
-                <li>Developed single-page web applications interacting with REST APIs</li>
-                <li>Implemented cross-browser compatible UI components</li>
-                <li>Maintained and refactored existing frontend codebase</li>
-              </ul>
-            </div>
-          </section>
-          <section class="languages-section">
-            <h2>Selected Projects</h2>
-            <div class="job">
-              <h3>Enterprise Web Banking Platform</h3>
-              <p>Large-scale web banking platform aimed at improving digital customer experience and enabling faster release cycles for a major financial institution.</p>
-              <ul>
-                <li>Developed core web UI features using React and TypeScript</li>
-                <li>Contributed to modernization of frontend architecture and reusable component libraries</li>
-                <li>Optimized rendering and data fetching flows improving application responsiveness and perceived performance</li>
-                <li>Collaborated with cross-functional teams (5–6 FE, 5–6 mobile, backend, QA, analysts) to support frequent product releases</li>
-                <li>Supported platform used by millions of banking customers</li>
-              </ul>
-            </div>
-            <div class="job">
-              <h3>Global Logistics Transportation Management System</h3>
-              <p>Enterprise transportation management platform coordinating shipments across global logistics operations.</p>
-              <ul>
-                <li>Developed complex UI workflows for shipment lifecycle management using React and TypeScript</li>
-                <li>Implemented reusable components and form workflows using modern validation and state management libraries</li>
-                <li>Collaborated with distributed engineering teams including architects, DevOps and QA</li>
-                <li>Contributed to scalable frontend architecture in Nx monorepo environment</li>
-                <li>Supported logistics workflows coordinating shipments across multiple delivery stages (first-mile to last-mile)</li>
-              </ul>
-            </div>
-            <div class="page-break"></div>
-            <div class="new-page-padding"></div>
-            <div class="job">
-              <h3>Healthcare &amp; Retail Digital Platform</h3>
-              <p>Large enterprise platform improving digital access to healthcare services and consumer retail experience.</p>
-              <ul>
-                <li>Developed cross-platform mobile application features using React Native and GraphQL APIs</li>
-                <li>Collaborated with backend teams on BFF contract design and API integration</li>
-                <li>Delivered UI features and demos to client stakeholders in an Agile environment</li>
-                <li>Improved frontend code quality through automated tests and code reviews</li>
-              </ul>
-            </div>
-          </section>
-          <section>
-            <h2>Education</h2>
-            <div class="education"><strong>Belarusian State University of Informatics and Radioelectronics (BSUIR)</strong><br>Bachelor's degree - Computer Technologies (2017 – 2021)
-            </div>
-            <div class="education"><strong>BSUIR Affiliate &quot;Minsk Radioengineering College&quot;</strong><br>Specialist Degree — Software Programming Technologies (2013 – 2017)
-            </div>
-          </section>
+      <section class="professional-summary">
+        <h2>Professional Summary</h2>
+        <p>Senior Frontend Developer with <b>9+ years of experience</b> building scalable web applications using <b>Next, React </b>and <b>TypeScript</b>. I've been building things since I was a kid.</p>
+        <p>My main goal is to move products forward and make developers' lives easier, finding the struggle points and enhancing them.</p>
+        <p>
+          Experienced in building maintainable systems with 
+          strong focus on performance, clean code and great user experience.
+          Skilled in leading teams, driving innovation, and delivering high-impact 
+          solutions in startups and enterprises.
+        </p>
+      </section>
+      <section>
+        <h2>Core Skills</h2>
+        <div class="skills"><span><strong>Languages: </strong>JavaScript (ES6+), TypeScript, Node.js</span><span><strong>Frontend: </strong>React, Next.js, React Native, Redux, Zustand, React Query / TanStack Query</span><span><strong>Testing: </strong>Jest, Vitest, React Testing Library, Playwright, Cypress</span><span><strong>Architecture: </strong>Design Systems, Microfrontends, Monorepo</span><span><strong>Performance &amp; Quality: </strong>Web Performance Optimization, Code Splitting, Lazy Loading, Lighthouse Optimization, Web Vitals (LCP, CLS, INP)</span><span><strong>Tooling: </strong>Webpack, Vite, Nx, Git, CI/CD</span><span><strong>Mobile: </strong>React Native (iOS, Android)</span><span><strong>Styling: </strong>SASS/SCSS, styled-components, Tailwind CSS</span><span><strong>APIs: </strong>REST, GraphQL</span><span><strong>UI Development: </strong>Design Systems, Storybook</span><span><strong>Accessibility: </strong>WCAG, semantic HTML, accessible component design</span><span><strong>AI: </strong>Claude, Copilot</span>
         </div>
-        <aside class="sidebar-column">
-          <section>
-            <h2>Core Skills</h2>
-            <div class="skills"><span><strong>Languages: </strong>JavaScript (ES6+), TypeScript</span><span><strong>Frontend: </strong>React, Next.js, React Native, Redux, Zustand</span><span><strong>Testing: </strong>Jest, Vitest, React Testing Library</span><span><strong>Architecture: </strong>Design Systems, Microfrontends, Monorepo</span><span><strong>Performance &amp; Quality: </strong>Web Performance Optimization, Code Splitting, Lazy Loading, Lighthouse Optimization</span><span><strong>Tooling: </strong>Webpack, Vite, Nx, Git, CI/CD</span><span><strong>Mobile: </strong>React Native (iOS, Android)</span><span><strong>Styling: </strong>SASS/SCSS, styled-components</span><span><strong>APIs: </strong>REST, GraphQL</span><span><strong>UI Development: </strong>Design Systems, Storybook</span><span><strong>Accessibility: </strong>WCAG, semantic HTML, accessible component design</span><span><strong>AI: </strong>Claude, Copilot</span>
-            </div>
-          </section>
-          <section>
-            <h2>Languages</h2>
-            <ul class="languages">
-              <li>English</li>
-              <li>Polish</li>
-              <li>Belarusian</li>
-              <li>Russian</li>
-            </ul>
-          </section>
-        </aside>
-      </div>
+      </section>
+      <section>
+        <h2>Professional Experience</h2>
+        <div class="job">
+          <div class="job-header">
+            <h3>EPAM Systems — Senior Frontend Developer</h3>
+            <div class="job-meta">Nov 2022 – Present · Poland</div>
+          </div>
+          <ul>
+            <li>Develop scalable web applications using React and TypeScript in enterprise environments, including a major banking platform with secure authentication flows and real-time data features, supporting millions of customers</li>
+            <li>Design reusable UI components and micro-frontend architecture, contributing to shared design systems</li>
+            <li>Optimize frontend performance through code splitting, lazy loading and bundle optimization, cutting initial bundle size by ~66% (2.5MB → 856KB) and improving LCP from 2.6s to 1.4s</li>
+            <li>Implement accessible user interfaces compliant with WCAG standards</li>
+            <li>Implement feature flags and A/B testing to support safe, iterative releases; build i18n/localization support for multi-region rollout</li>
+            <li>Collaborate with cross-functional teams (5–6 FE, 5–6 mobile, backend, QA, analysts) to support weekly product releases</li>
+            <li>Participate in technical planning and backlog grooming with product teams</li>
+            <li>Conduct code reviews and mentor 1–2 junior developers</li>
+          </ul>
+        </div>
+        <div class="page-break"></div>
+        <div class="new-page-padding"></div>
+        <div class="job">
+          <div class="job-header">
+            <h3>EPAM Systems — Frontend Engineer</h3>
+            <div class="job-meta">Nov 2018 – Nov 2022 · Poland / Belarus</div>
+          </div>
+          <ul>
+            <li>Developed production UI features using React and modern JavaScript</li>
+            <li>Developed complex UI workflows for shipment lifecycle management in a global logistics transportation platform, using React, TypeScript and an Nx monorepo</li>
+            <li>Developed cross-platform mobile application features using React Native and GraphQL APIs for a healthcare &amp; retail platform, collaborating with backend teams on BFF contract design</li>
+            <li>Improved performance through dependency optimization and bundle splitting</li>
+            <li>Integrated frontend applications with REST and GraphQL APIs</li>
+            <li>Enhanced accessibility of interfaces following WCAG standards</li>
+            <li>Maintained high code quality through automated testing and code reviews</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-header">
+            <h3>iTechArt Group — Frontend Engineer</h3>
+            <div class="job-meta">Aug 2018 – Oct 2018 · Minsk, Belarus</div>
+          </div>
+          <ul>
+            <li>Developed UI components for a marketing automation platform using React</li>
+            <li>Implemented new product features and supported legacy frontend code</li>
+            <li>Collaborated with distributed teams in Agile workflows</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-header">
+            <h3>Ultralab — Frontend Engineer</h3>
+            <div class="job-meta">Jan 2018 – Jul 2018 · Minsk, Belarus</div>
+          </div>
+          <ul>
+            <li>Developed UI features for a digital advertising platform</li>
+            <li>Implemented responsive interfaces using JavaScript, HTML and CSS</li>
+            <li>Integrated frontend with backend APIs and participated in sprint planning</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-header">
+            <h3>LWO — Frontend Developer</h3>
+            <div class="job-meta">Sep 2017 – Jan 2018 · Minsk, Belarus</div>
+          </div>
+          <ul>
+            <li>Developed single-page web applications interacting with REST APIs</li>
+            <li>Implemented cross-browser compatible UI components</li>
+            <li>Maintained and refactored existing frontend codebase</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <div class="education"><strong>Belarusian State University of Informatics and Radioelectronics (BSUIR)</strong><br>Bachelor's degree - Computer Technologies (2017 – 2021)
+        </div>
+        <div class="education"><strong>BSUIR Affiliate &quot;Minsk Radioengineering College&quot;</strong><br>Specialist Degree — Software Programming Technologies (2013 – 2017)
+        </div>
+      </section>
+      <section>
+        <h2>Languages</h2>
+        <ul class="languages">
+          <li>English</li>
+          <li>Polish</li>
+          <li>Belarusian</li>
+          <li>Russian</li>
+        </ul>
+      </section>
     </div>
   </body>
 </html>
